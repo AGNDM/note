@@ -1,0 +1,19 @@
+.env
+# Obsidian local config
+.obsidian/workspace
+.obsidian/cache
+.obsidian/obsidian-publish.json
+
+# Ignore plugin build files or logs
+.obsidian/plugins/*/node_modules/
+.obsidian/plugins/*/dist/
+.obsidian/plugins/*/*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor config
+.vscode/
+
+.obsidian/plugins/github-copilot/data.json

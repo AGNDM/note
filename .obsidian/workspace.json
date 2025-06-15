@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "969fe7deffe00e59",
+    "type": "split",
+    "children": [
+      {
+        "id": "8db3633ab5ed6a19",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23cbe7556e5e4df9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "This is a test.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "This is a test"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "52763b4c3d240f12",
+    "type": "split",
+    "children": [
+      {
+        "id": "a005a65dbcfd3604",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7bf98df41ebfe477",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "c8ff0a33c3e189bd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "ef700baa4ce13674",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2d9a92805691cead",
+    "type": "split",
+    "children": [
+      {
+        "id": "de00d385003fc2dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0d654092d19ff6d4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "日本語/日语复习.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "日语复习 的反向链接列表"
+            }
+          },
+          {
+            "id": "99455db72027a152",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "This is a test.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "This is a test 的出链列表"
+            }
+          },
+          {
+            "id": "37fc762310121244",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "b55a60a16419263b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "日本語/日语复习.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "日语复习 的大纲"
+            }
+          },
+          {
+            "id": "fa1f7f9856041030",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3be15caa83a1550a",
+            "type": "leaf",
+            "state": {
+              "type": "github-copilot-chat-view",
+              "state": {},
+              "icon": "bot-message-square",
+              "title": "Copilot Chat"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 341.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "23cbe7556e5e4df9",
+  "lastOpenFiles": [
+    "4913",
+    "欢迎.md",
+    "未命名.canvas",
+    "Algo/Approximate algo.md",
+    "This is a test.md",
+    "Algo/approx_lec.pdf",
+    "Algo/approx_lec.pdf.crdownload",
+    "Algo",
+    "Templates/latex.md",
+    "优化理论与算法",
+    "2025-06-09.md",
+    "日本語/日语复习.md",
+    "Templates/Latex.md",
+    "Templates",
+    "2025-06-14.md",
+    "日本語/Pasted image 20250611155100.png",
+    "日本語/Pasted image 20250611170643.png",
+    "日本語",
+    "创建链接.md",
+    "未命名 1.canvas",
+    "未命名 2.canvas"
+  ]
+}

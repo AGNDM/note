@@ -1,0 +1,16 @@
+{
+  "conversations": [
+    {
+      "id": "1749966468844",
+      "title": "New Conversation",
+      "messages": [],
+      "createdAt": 1749966468844,
+      "updatedAt": 1749966468844,
+      "model": {
+        "label": "Gemini 2.5 Pro",
+        "value": "gemini-2.5-pro-preview-05-06"
+      }
+    }
+  ],
+  "activeConversationId": "1749966468844"
+}
