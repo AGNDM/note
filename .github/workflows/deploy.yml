@@ -1,0 +1,35 @@
+name: Deploy Docs # 工作流的名称
+
+on:
+  push:
+    branches:
+      - main # 当推送到 main 分支时触发 (如果您的主分支是 master，请改为 master)
+  pull_request:
+    branches:
+      - main # 当对 main 分支发起拉取请求时触发 (如果您的主分支是 master，请改为 master)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 在 Ubuntu 系统上运行
+    steps:
+      - uses: actions/checkout@v4 # 检出代码
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5 # 设置 Python 环境
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies # 安装 MkDocs 和 Material 主题
+        run: |
+          pip install mkdocs mkdocs-material
+
+      - name: Build site # 构建网站
+        run: mkdocs build --clean --verbose
+
+      - name: Deploy to GitHub Pages # 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # 使用这个 Action 来部署
+        if: ${{ github.ref == 'refs/heads/main' }} # 仅在 main 分支 (或您的主分支) 成功推送时部署
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 提供的 token
+          publish_dir: ./site # MkDocs 构建网站的默认输出目录

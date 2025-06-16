@@ -1,0 +1,45 @@
+site_name: AGNote  # 您的网站名称
+site_url: https://agndm.github.io/note/ # 替换为您的实际网址
+
+# 告诉MkDocs您的Markdown笔记在哪里
+# 如果笔记在仓库根目录，用 '.'
+# 如果笔记在一个名为 'notes' 的文件夹里，用 'notes'
+docs_dir: . 
+
+theme:
+  name: material  # 使用 Material 主题，非常美观
+  palette:
+    scheme: default # 默认主题，可以是 light, dark 等
+
+# 排除Obsidian的配置文件，避免发布到网页
+exclude_docs: |
+  .obsidian/
+  *.excalidraw
+  .git/
+  .gitignore
+
+# 启用数学公式和一些Obsidian常用扩展
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_numbers: true
+      noclasses: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+# 加载MathJax以渲染LaTeX数学公式
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -1,4 +1,6 @@
 test
+$$
+$$
 
 $$
 
@@ -8,8 +10,11 @@ $$
 $$
 
 test
+\dm
+$$
 
 <br>
+
 test
 
 test
@@ -93,11 +98,11 @@ o
 $$\pi\,x+\frac{5x}{\sum{6}}$$
 
 $$\sum_{j = 0}^5j^2\pi=8$$
-
+xhat
 $$\sigma\Sigma\phi\,\Phi\,\delta\,\Delta$$
 $$\ldots,\vdots$$
-$$\langle x \rangle\,\|x\|$$
-$$\mathcal{HELLO}$$
+$$\langle x \rangle\,\|x\| $$_{sdfgh}$$\mathcal{HELLO}$$
+\hat{x}\hbar \dot{x}\vec{x}
 $$
 \Bigg\{\,\begin{array}{rcl}
 	4&6&7 \\
