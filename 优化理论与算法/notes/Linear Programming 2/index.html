@@ -919,49 +919,34 @@
 <h3 id="_3">检验最优<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>如果<span class="arithmatex">\(c_{规范型}\)</span>中全都是正的，那么就已经最优了，因为没有减小的空间了</p>
 <h3 id="_4">变换基<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p><span class="arithmatex">\(\exists c_{i}&lt;0\)</span>，需要变换基
-我们假设需要用<span class="arithmatex">\(x_i\)</span>把<span class="arithmatex">\(x_j\)</span>换掉，那么我们考虑<span class="arithmatex">\(x_j\)</span>的一些性质：</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(x_j=b_{k}\)</span>， <span class="arithmatex">\(k\)</span>是<span class="arithmatex">\(x_j\)</span>作为基的那一行</p>
-</li>
-<li>
-<p>除了第<span class="arithmatex">\(k\)</span>行，其他行都没有<span class="arithmatex">\(x_j\)</span>的出现，这是由规范型所保证的</p>
-</li>
-<li>
-<p>我们单独考察第<span class="arithmatex">\(k\)</span>行，也就是第<span class="arithmatex">\(k\)</span>个等式：</p>
-<ol>
-<li>
-<p>这个等式中，<span class="arithmatex">\(x_j\)</span>是唯一一个系数不为0且本身不为0的数</p>
-</li>
-<li>
-<p><span class="arithmatex">\(x_i\)</span>的系数非零</p>
-</li>
-</ol>
-</li>
-</ol>
-<p>所以我们可以发现，要使第<span class="arithmatex">\(k\)</span>行继续成立，我们必须要保证
-$$
+<p><span class="arithmatex">\(\exists c_{i}&lt;0\)</span>，需要变换基</p>
+<p>我们假设需要用<span class="arithmatex">\(x_i\)</span>把<span class="arithmatex">\(x_j\)</span>换掉，那么我们考虑<span class="arithmatex">\(x_j\)</span>的一些性质：
+    1. <span class="arithmatex">\(x_j=b_{k}\)</span>， <span class="arithmatex">\(k\)</span>是<span class="arithmatex">\(x_j\)</span>作为基的那一行
+    2. 除了第<span class="arithmatex">\(k\)</span>行，其他行都没有<span class="arithmatex">\(x_j\)</span>的出现，这是由规范型所保证的
+    3. 我们单独考察第<span class="arithmatex">\(k\)</span>行，也就是第<span class="arithmatex">\(k\)</span>个等式：
+        1. 这个等式中，<span class="arithmatex">\(x_j\)</span>是唯一一个系数不为0且本身不为0的数
+        2. <span class="arithmatex">\(x_i\)</span>的系数非零</p>
+<p>所以我们可以发现，要使第<span class="arithmatex">\(k\)</span>行继续成立，我们必须要保证</p>
+<div class="arithmatex">\[
     A_{ki}x_{i}+A_{kj}x_{j}=b_{k}
-$$</p>
-<blockquote>
+\]</div>
 <p>很简单地，我们考虑只有一个约束和两个变量的例子：</p>
 <div class="arithmatex">\[
-  ax_{1}+bx_{2}=c
+    ax_{1}+bx_{2}=c
 \]</div>
 <div class="arithmatex">\[
 \begin{align*}
-  x_{1},x_{2} \ge 0\\
+    x_{1},x_{2} \ge 0\\
 \end{align*}
 \]</div>
-<p>首先在规范型中<span class="arithmatex">\(b=1\)</span>，因此我们可以在这里假设<span class="arithmatex">\(b&gt;0\)</span>
-其次，由于在变换前，<span class="arithmatex">\(x_{2} = \frac{c}{b} \ge 0\)</span>所以我们有<span class="arithmatex">\(c \ge 0\)</span>，</p>
-<p>我们要用<span class="arithmatex">\(x_{1}\)</span>替换<span class="arithmatex">\(x_{2}\)</span>
-如果<span class="arithmatex">\(a&gt;0\)</span>，那么</p>
+<p>首先在规范型中<span class="arithmatex">\(b=1\)</span>，因此我们可以在这里假设<span class="arithmatex">\(b&gt;0\)</span></p>
+<p>其次，由于在变换前，<span class="arithmatex">\(x_{2} = \frac{c}{b} \ge 0\)</span>所以我们有<span class="arithmatex">\(c \ge 0\)</span>，</p>
+<p>我们要用<span class="arithmatex">\(x_{1}\)</span>替换<span class="arithmatex">\(x_{2}\)</span></p>
+<p>如果<span class="arithmatex">\(a&gt;0\)</span>，那么</p>
 <div class="arithmatex">\[
 \begin{align*}
 \max x_{1}=\frac{1}{a}(c-bx_{2})&amp;=\frac{c}{a}\\
-  x_{2}&amp;=0\text{ 时取到}
+    x_{2}&amp;=0\text{ 时取到}
 \end{align*}
 \]</div>
 <p>如果<span class="arithmatex">\(a&lt;0\)</span>，那么</p>
@@ -971,35 +956,34 @@ $$</p>
 x_{2}&amp;=\infty\text{ 时取到}
 \end{align*}
 \]</div>
-</blockquote>
-<p>回到原本的问题，将<span class="arithmatex">\(A_{kj} = 1\)</span>(规范型)带入，
-$$
+<p>回到原本的问题，将<span class="arithmatex">\(A_{kj} = 1\)</span>(规范型)带入，</p>
+<div class="arithmatex">\[
     x_{i} = \frac{b_{k}-x_{j}}{A_{ki}}
-$$
-<span class="arithmatex">\(x_{j}\)</span>是我们唯一可以改变的，我们希望把它变化到0来让<span class="arithmatex">\(x_i\)</span>取到最大，从而使目标函数最小
-在变换前，我们有
-$$
+\]</div>
+<p><span class="arithmatex">\(x_{j}\)</span>是我们唯一可以改变的，我们希望把它变化到0来让<span class="arithmatex">\(x_i\)</span>取到最大，从而使目标函数最小
+在变换前，我们有</p>
+<div class="arithmatex">\[
     x_{j} = b_{k} &gt; 0
-$$
-那么有两种取法,
+\]</div>
+<p>那么有两种取法,
 - 一种是当<span class="arithmatex">\(A_{ki}&gt;0\)</span>，我们让<span class="arithmatex">\(x_j=0\)</span>取到最大值<span class="arithmatex">\(\frac{b_{k}}{A_{ki}}\)</span>，也就是我们可以在<span class="arithmatex">\(x_i\)</span>上走的最大步长
 - 另一种是当<span class="arithmatex">\(A_{ki}&lt;0\)</span>，我们让<span class="arithmatex">\(x_j=\infty\)</span>从而使目标函数无界</p>
 <p>这两种情况与之前的例子一一对应</p>
 <p>我们的最小比值法就是将第一种情况对每一个等式进行检查，取出最保守的那一种可能</p>
-<p>奇妙的是，由于单纯型表并不会记录<span class="arithmatex">\(x\)</span>的取值，所以其实我们的换基操作中对<span class="arithmatex">\(x_i,x_j\)</span>的改变本质上并不会在单纯型表中有所记录，我们只是在做LP问题的等价变形。
-当我们把新的基变量的系数变为1时，自然而然地就会有在第<span class="arithmatex">\(k\)</span>行，<span class="arithmatex">\(x_{i}=b_{k}\)</span></p>
+<p>奇妙的是，由于单纯型表并不会记录<span class="arithmatex">\(x\)</span>的取值，所以其实我们的换基操作中对<span class="arithmatex">\(x_i,x_j\)</span>的改变本质上并不会在单纯型表中有所记录，我们只是在做LP问题的等价变形。</p>
+<p>当我们把新的基变量的系数变为1时，自然而然地就会有在第<span class="arithmatex">\(k\)</span>行，<span class="arithmatex">\(x_{i}=b_{k}\)</span></p>
 <h2 id="_5">最终的函数值<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>为什么最终的函数值就是表中的<span class="arithmatex">\(-balance\)</span>
-我们用约束中的行将目标函数行进行高斯消元本质上是用确定性去替代不确定性。其逻辑是：
-$$
+我们用约束中的行将目标函数行进行高斯消元本质上是用确定性去替代不确定性。其逻辑是：</p>
+<div class="arithmatex">\[
 \min c^Tx \rightarrow \min c^Tx-b_{k} \rightarrow \min c^Tx-A_{k}^Tx \quad where\;A_{k}^Tx=b_{k}
-$$
-其确定性的部分<span class="arithmatex">\(b_k\)</span>自然而然地被我们以相反数的形式记录在了<span class="arithmatex">\(balance\)</span>里，而表中的目标函数块（不确定的部分）被我们维护着始终取最小值也就是0（通过对<span class="arithmatex">\(x\)</span>的赋值），直到我们发现没有可以优化的可能了（目标函数中洗漱吧全是正的）。此时不确定的部分为0，确定的部分为<span class="arithmatex">\(-balance\)</span>，相加即为最小值</p>
+\]</div>
+<p>其确定性的部分<span class="arithmatex">\(b_k\)</span>自然而然地被我们以相反数的形式记录在了<span class="arithmatex">\(balance\)</span>里，而表中的目标函数块（不确定的部分）被我们维护着始终取最小值也就是0（通过对<span class="arithmatex">\(x\)</span>的赋值），直到我们发现没有可以优化的可能了（目标函数中洗漱吧全是正的）。此时不确定的部分为0，确定的部分为<span class="arithmatex">\(-balance\)</span>，相加即为最小值</p>
 <h3 id="_6">检验数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>$$
+<div class="arithmatex">\[
     c^T-(某些高斯消元)
-$$
-也就是单纯型表的第一行第二列中的诸多值
+\]</div>
+<p>也就是单纯型表的第一行第二列中的诸多值
 检验数可以表示当前的非基变量对函数值的影响</p>
 <table>
 <thead>
