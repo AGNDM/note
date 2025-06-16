@@ -11,6 +11,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest # 在 Ubuntu 系统上运行
+    permissions: # <--- ADD THIS BLOCK
+      contents: write # Needed to check out code and push to repo if necessary
+      pages: write    # Needed to deploy to GitHub Pages
+      id-token: write # Needed for OpenID Connect, used by peaceiris/actions-gh-pages
+
     steps:
       - uses: actions/checkout@v4 # 检出代码
         with:
