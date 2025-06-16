@@ -1,1 +1,1 @@
-[[approx_lec.pdf]]
+[Approximate Algo](Approximate%algo)
