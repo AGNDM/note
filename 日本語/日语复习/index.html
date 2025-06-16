@@ -1,0 +1,1825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://agndm.github.io/note/%E6%97%A5%E6%9C%AC%E8%AA%9E/%E6%97%A5%E8%AF%AD%E5%A4%8D%E4%B9%A0/">
+      
+      
+        <link rel="prev" href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Matrix%20Calculus/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>第一课 - AGNote</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AGNote" class="md-header__button md-logo" aria-label="AGNote" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AGNote
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第一课
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AGNote" class="md-nav__button md-logo" aria-label="AGNote" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AGNote
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Algo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algo/Approximate%20algo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approximate algo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    优化理论与算法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            优化理论与算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Programming 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Simplex method
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Programming 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Matrix%20Calculus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matrix Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    日本語
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            日本語
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第一课
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一课
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      単語
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      単語
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">第一课<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">単語<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>关于长音：后鼻音和元音较多的汉字大多会是长音</p>
+<table>
+<thead>
+<tr>
+<th>Jap</th>
+<th>Chi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会社員（かいしゃいん）</td>
+<td>公司职员</td>
+</tr>
+<tr>
+<td>貴方（あなた）</td>
+<td>你</td>
+</tr>
+<tr>
+<td>銀行員（ぎんこういん）</td>
+<td></td>
+</tr>
+<tr>
+<td>医者（いしゃ）</td>
+<td></td>
+</tr>
+<tr>
+<td>あの方（あのかた）</td>
+<td>那位</td>
+</tr>
+<tr>
+<td>どなた・だれ（誰）</td>
+<td></td>
+</tr>
+<tr>
+<td>大学（だいがく）</td>
+<td></td>
+</tr>
+<tr>
+<td>先生（せんせい）</td>
+<td></td>
+</tr>
+<tr>
+<td>～ちゃん</td>
+<td></td>
+</tr>
+<tr>
+<td>何歳</td>
+<td></td>
+</tr>
+<tr>
+<td>きゅう</td>
+<td>９</td>
+</tr>
+<tr>
+<td>アメリカ</td>
+<td>美国</td>
+</tr>
+<tr>
+<td>～から来ました（来：き）</td>
+<td>从~来的</td>
+</tr>
+<tr>
+<td>中国（ちゅ==う==ごく）</td>
+<td></td>
+</tr>
+<tr>
+<td>教師（きょうし）</td>
+<td></td>
+</tr>
+<tr>
+<td>あの人（あのひと）</td>
+<td>那个人</td>
+</tr>
+<tr>
+<td>社員（しゃいん）</td>
+<td></td>
+</tr>
+<tr>
+<td>おいくつ</td>
+<td>几岁</td>
+</tr>
+<tr>
+<td>イギリス</td>
+<td>英国</td>
+</tr>
+<tr>
+<td>ドイツ</td>
+<td>德国</td>
+</tr>
+<tr>
+<td>病院（びょういん）</td>
+<td></td>
+</tr>
+<tr>
+<td>インド</td>
+<td>印度</td>
+</tr>
+<tr>
+<td>韓国（かん==こ==く）</td>
+<td></td>
+</tr>
+<tr>
+<td>名前（なまえ）</td>
+<td></td>
+</tr>
+<tr>
+<td>## 文法</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>は<ol>
+<li>提示话题<ul>
+<li>映画は　何時から　ですか</li>
+</ul>
+</li>
+<li>加强否定<ul>
+<li>～では　ありません</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>です<ol>
+<li>判断句<ul>
+<li>私は　会社員です</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>では　あぃません</li>
+<li>じゃ　ありません</li>
+<li>ですか</li>
+<li>の　表示所属</li>
+<li>も　包さんも　中国人です</li>
+</ul>
+<h1 id="_3">第二课<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="_4">単語<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Jap</th>
+<th>Chi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>辞書（じしょ）</td>
+<td></td>
+</tr>
+<tr>
+<td>傘（かさ）</td>
+<td></td>
+</tr>
+<tr>
+<td>ボールペン</td>
+<td></td>
+</tr>
+<tr>
+<td>ノート</td>
+<td></td>
+</tr>
+<tr>
+<td>名刺（めい==し==）</td>
+<td></td>
+</tr>
+<tr>
+<td>雑誌（ざっし）</td>
+<td></td>
+</tr>
+<tr>
+<td>コンプーター</td>
+<td></td>
+</tr>
+<tr>
+<td>鞄（かばん）</td>
+<td></td>
+</tr>
+<tr>
+<td>鍵（かぎ）</td>
+<td></td>
+</tr>
+<tr>
+<td>新聞（しんぶん）</td>
+<td></td>
+</tr>
+<tr>
+<td>車（くるま）</td>
+<td></td>
+</tr>
+<tr>
+<td>本</td>
+<td></td>
+</tr>
+<tr>
+<td>テレビ</td>
+<td>电视</td>
+</tr>
+<tr>
+<td>時計（とけい）</td>
+<td></td>
+</tr>
+<tr>
+<td>カメラ</td>
+<td>相机</td>
+</tr>
+<tr>
+<td>鉛筆（えんぴつ）</td>
+<td></td>
+</tr>
+<tr>
+<td>椅子</td>
+<td></td>
+</tr>
+<tr>
+<td>シーディー</td>
+<td></td>
+</tr>
+<tr>
+<td>お土産（おみやげ）</td>
+<td></td>
+</tr>
+<tr>
+<td>チ==ョ==コレート</td>
+<td></td>
+</tr>
+<tr>
+<td>==違==います</td>
+<td></td>
+</tr>
+<tr>
+<td>机（つくえ）</td>
+<td></td>
+</tr>
+<tr>
+<td>## 文法</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>-　こそあど
+    - ～れ　事物指代
+        - これは　本です。
+        - 先生の鞄はどれですか。
+    - ～の　指示连体 后面要加个东西
+    - ～ちら　方位
+    - ～こ　场所指示词　あそこ特殊拼法
+- そうです
+- ～は　Ａですか、　Ｂですか
+- ～の～ 名词修饰名词
+    - これは　私の本です。
+- の代替名词使用
+    - これわ私のです
+- そうですか
+- Aは　何ですか
+    - 这里的何也可以变为どれ（这是こそあど体系里的ど）・だれ（誰）・どなた
+- これは　誰の～　ですか
+- この　X　は　誰の（X）ですか
+- それは 私の　です。</p>
+<h1 id="_5">第三课<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="_6">単語<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Jap</th>
+<th>Chi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>食堂（しょくどう）</td>
+<td></td>
+</tr>
+<tr>
+<td>エスカレーター</td>
+<td></td>
+</tr>
+<tr>
+<td>トイレ</td>
+<td></td>
+</tr>
+<tr>
+<td>お手洗い</td>
+<td></td>
+</tr>
+<tr>
+<td>会==議==室（かいぎしつ）</td>
+<td></td>
+</tr>
+<tr>
+<td>事==務==所（じむしょ）</td>
+<td></td>
+</tr>
+<tr>
+<td>お国（おくに）</td>
+<td></td>
+</tr>
+<tr>
+<td>靴（くつ）</td>
+<td></td>
+</tr>
+<tr>
+<td>イタリア</td>
+<td>意大利</td>
+</tr>
+<tr>
+<td>いくら</td>
+<td></td>
+</tr>
+<tr>
+<td>せん</td>
+<td></td>
+</tr>
+<tr>
+<td>まん</td>
+<td></td>
+</tr>
+<tr>
+<td>ひゃく</td>
+<td></td>
+</tr>
+<tr>
+<td>これを下さい（これをください）</td>
+<td></td>
+</tr>
+<tr>
+<td>どうも</td>
+<td></td>
+</tr>
+<tr>
+<td>ワイン</td>
+<td></td>
+</tr>
+<tr>
+<td>地下（ちか）</td>
+<td></td>
+</tr>
+<tr>
+<td>～階</td>
+<td></td>
+</tr>
+<tr>
+<td>お見せてください</td>
+<td></td>
+</tr>
+<tr>
+<td>教室（きょうしつ）</td>
+<td></td>
+</tr>
+<tr>
+<td>受付（うけつけ）</td>
+<td></td>
+</tr>
+<tr>
+<td>自動販売機（じどうはんばいき）</td>
+<td></td>
+</tr>
+<tr>
+<td>ロビー</td>
+<td></td>
+</tr>
+<tr>
+<td>フランス</td>
+<td></td>
+</tr>
+<tr>
+<td>ネクタイ</td>
+<td></td>
+</tr>
+<tr>
+<td>階段（かい==だ==ん）</td>
+<td></td>
+</tr>
+<tr>
+<td>電話</td>
+<td></td>
+</tr>
+<tr>
+<td>部屋（へや）</td>
+<td></td>
+</tr>
+<tr>
+<td>バンコク１</td>
+<td></td>
+</tr>
+<tr>
+<td>バルリン０</td>
+<td></td>
+</tr>
+<tr>
+<td>スイス１</td>
+<td></td>
+</tr>
+<tr>
+<td>売り場（うりば）０</td>
+<td></td>
+</tr>
+<tr>
+<td>## 文法</td>
+<td></td>
+</tr>
+<tr>
+<td>- ここ・そこ・あそこ・どこ</td>
+<td></td>
+</tr>
+<tr>
+<td>- こちら・そちら・あちら・どちら</td>
+<td></td>
+</tr>
+<tr>
+<td>- ここは　ホテルです。</td>
+<td></td>
+</tr>
+<tr>
+<td>- あそこは　食堂です。</td>
+<td></td>
+</tr>
+<tr>
+<td>- 病院は　どこですか。</td>
+<td></td>
+</tr>
+<tr>
+<td>- こちらは　教室です。</td>
+<td></td>
+</tr>
+<tr>
+<td>- これは　いくらですか。</td>
+<td></td>
+</tr>
+<tr>
+<td>![[Pasted image 20250611170643.png]]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="_7">第四课<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<h2 id="_8">単語<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>日本語</th>
+<th>中国語</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>今（いま）</td>
+<td></td>
+</tr>
+<tr>
+<td>五分（ごふん）</td>
+<td></td>
+</tr>
+<tr>
+<td>十分（じゅっぷん）</td>
+<td></td>
+</tr>
+<tr>
+<td>何分（なんぷん）</td>
+<td></td>
+</tr>
+<tr>
+<td>四時（よじ）</td>
+<td></td>
+</tr>
+<tr>
+<td>七時（しちじ）</td>
+<td></td>
+</tr>
+<tr>
+<td>九時（くじ）</td>
+<td></td>
+</tr>
+<tr>
+<td>起きる</td>
+<td></td>
+</tr>
+<tr>
+<td>勉強する</td>
+<td></td>
+</tr>
+<tr>
+<td>何時</td>
+<td></td>
+</tr>
+<tr>
+<td>休み</td>
+<td></td>
+</tr>
+<tr>
+<td>毎晩（まいばん）</td>
+<td></td>
+</tr>
+<tr>
+<td>寝る（ねる）</td>
+<td></td>
+</tr>
+<tr>
+<td>毎日（まいにち）</td>
+<td></td>
+</tr>
+<tr>
+<td>午後（ごご）</td>
+<td></td>
+</tr>
+<tr>
+<td>番号（ばん==ご==う）</td>
+<td></td>
+</tr>
+<tr>
+<td>何番（なんばん）</td>
+<td></td>
+</tr>
+<tr>
+<td>働く（はたらく）</td>
+<td></td>
+</tr>
+<tr>
+<td>明日（あした）</td>
+<td></td>
+</tr>
+<tr>
+<td>一昨日（おととい）</td>
+<td></td>
+</tr>
+<tr>
+<td>ペキン</td>
+<td></td>
+</tr>
+<tr>
+<td>ロンドン</td>
+<td></td>
+</tr>
+<tr>
+<td>ロサンゼ==ル==ス</td>
+<td></td>
+</tr>
+<tr>
+<td>今日（きょう）</td>
+<td></td>
+</tr>
+<tr>
+<td>会議</td>
+<td></td>
+</tr>
+<tr>
+<td>試験（しけん）</td>
+<td></td>
+</tr>
+<tr>
+<td>ゆう==び==んきょく</td>
+<td></td>
+</tr>
+<tr>
+<td>図書館（としょかん）</td>
+<td></td>
+</tr>
+<tr>
+<td>休む</td>
+<td></td>
+</tr>
+<tr>
+<td>晩</td>
+<td></td>
+</tr>
+<tr>
+<td>明後日（あさって）２</td>
+<td></td>
+</tr>
+<tr>
+<td>今朝</td>
+<td></td>
+</tr>
+<tr>
+<td>終わる</td>
+<td></td>
+</tr>
+<tr>
+<td>映画（えいが）</td>
+<td></td>
+</tr>
+<tr>
+<td>大変ですね。（==た==いへんですね）</td>
+<td></td>
+</tr>
+<tr>
+<td>デパート</td>
+<td></td>
+</tr>
+<tr>
+<td>美術館（びじゅつかん）</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">文法<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li>～は　XからYまで　です</li>
+<li>時間<ul>
+<li>いちじ、にじ、さんじ、==よじ==、ごじ、ろくじ、==しちじ==、はちじ、==くじ==、じゅ==う==じ、じゅういちじ、じゅうにじ</li>
+<li>い==っ==ぷん、にふん、さんぷん、よんぷん、、ごふん、ろ==っ==ぷん、ななふん、はっぷん、きゅうふん、じゅっぷん、じゅうごふん、にじゅっぷん</li>
+<li>12:55　一時五分前（いちじごふんまえ）　十二時五十五分（じゅうにじごじゅうごふん）</li>
+<li>何曜日</li>
+</ul>
+</li>
+<li>動詞（どうし）<ul>
+<li>1类动词<ul>
+<li>单词最后是う段除る以外的</li>
+<li>单词最后是る但是倒数第二个是あ・う・お（实际上有别的特例）</li>
+<li>连用形变化：最后一个假名变为イ段+ます</li>
+</ul>
+</li>
+<li>2类动词<ul>
+<li>最后一个假名是る，倒数第二个是い・え段</li>
+<li>连用形变化：去る加ます</li>
+</ul>
+</li>
+<li>3类动词<ul>
+<li>サ变动词（XXする）：去する加ます</li>
+<li>カ变动词：くる-&gt;きます</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>敬体助动词ます　前接动词连用形</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>肯定</th>
+<th>否定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现在未来</td>
+<td>ます</td>
+<td>ません</td>
+</tr>
+<tr>
+<td>过去</td>
+<td>ました</td>
+<td>ませんでした</td>
+</tr>
+<tr>
+<td>- に</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- 毎日七時に起きる。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- 一类时间点比如：来週、今日、明日、今、昨日、先週、去年、来年、毎日、毎週、毎年  不可以加に</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- 何曜日、何時， 其他具体时间点与星期几  都可以加に 有些是必须的有些是可选的</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- から</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- 朝八時から　始まります。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- 会社は　九時からです。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- まで</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- 今日は　夜八時(はちじ)まで　図書館に　います。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>今天在图书馆呆到了八点。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- デパートは　午前（ごぜん）十時から　夜十時までです。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- と　和</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="_10">第五课<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h1>
+<h2 id="_11">単語<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>日本語</th>
+<th>中国語</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>行く</td>
+<td></td>
+</tr>
+<tr>
+<td>帰る</td>
+<td></td>
+</tr>
+<tr>
+<td>來る</td>
+<td></td>
+</tr>
+<tr>
+<td>自転車</td>
+<td></td>
+</tr>
+<tr>
+<td>歩いて（あるいて）「歩く的て形」</td>
+<td>走路</td>
+</tr>
+<tr>
+<td>船（ふね）</td>
+<td></td>
+</tr>
+<tr>
+<td>飛行機（ひこうき）</td>
+<td></td>
+</tr>
+<tr>
+<td>電車</td>
+<td></td>
+</tr>
+<tr>
+<td>新幹線</td>
+<td></td>
+</tr>
+<tr>
+<td>普通</td>
+<td></td>
+</tr>
+<tr>
+<td>急行</td>
+<td></td>
+</tr>
+<tr>
+<td>特急（とっきゅう）</td>
+<td></td>
+</tr>
+<tr>
+<td>バス</td>
+<td></td>
+</tr>
+<tr>
+<td>タクシー</td>
+<td></td>
+</tr>
+<tr>
+<td>スーパー</td>
+<td></td>
+</tr>
+<tr>
+<td>駅</td>
+<td></td>
+</tr>
+<tr>
+<td>学校(が==っ==こう）</td>
+<td></td>
+</tr>
+<tr>
+<td>人</td>
+<td></td>
+</tr>
+<tr>
+<td>友達</td>
+<td></td>
+</tr>
+<tr>
+<td>彼（かれ）</td>
+<td></td>
+</tr>
+<tr>
+<td>彼女（かのじょ）</td>
+<td></td>
+</tr>
+<tr>
+<td>家族（か==ぞ==く)</td>
+<td></td>
+</tr>
+<tr>
+<td>先・来・今　＋　週（しゅう）・月（げつ）</td>
+<td></td>
+</tr>
+<tr>
+<td>去年・来年・今年（ことし）</td>
+<td></td>
+</tr>
+<tr>
+<td>～年</td>
+<td></td>
+</tr>
+<tr>
+<td>～月（がつ）</td>
+<td></td>
+</tr>
+<tr>
+<td>いつ</td>
+<td>什么时候</td>
+</tr>
+<tr>
+<td>誕生日</td>
+<td></td>
+</tr>
+<tr>
+<td>よっが</td>
+<td></td>
+</tr>
+<tr>
+<td>ようが</td>
+<td></td>
+</tr>
+<tr>
+<td>～番線</td>
+<td></td>
+</tr>
+<tr>
+<td>ひとりで</td>
+<td></td>
+</tr>
+<tr>
+<td>![[Pasted image 20250611155100.png]]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_12">文法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li>へ　「え」体言后，表示移动的方向<ul>
+<li>駅へ　行く。</li>
+</ul>
+</li>
+<li>と　体言后，表示行为的共同者<ul>
+<li>静香ちゃんと　一緒に　行きます。</li>
+</ul>
+</li>
+<li>で　表示手段，方式或方法 相当于by？<ul>
+<li>自転車で　学校へ　行く。</li>
+</ul>
+</li>
+<li>から　空间上的起点<ul>
+<li>私は　ちゅうごから　来ました。</li>
+<li>休みの日（ひ）には　家から　出ません。</li>
+</ul>
+</li>
+<li>いつ<ul>
+<li>いつ　国へ　帰ります。</li>
+</ul>
+</li>
+<li>疑問詞＋も～ません<ul>
+<li>どこも行きません。</li>
+</ul>
+</li>
+</ul>
+<h1 id="_13">第六课<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
+<h2 id="_14">単語<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>日本語</th>
+<th>中国語</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吸う</td>
+<td></td>
+</tr>
+<tr>
+<td>会う（あう）１</td>
+<td></td>
+</tr>
+<tr>
+<td>買う</td>
+<td></td>
+</tr>
+<tr>
+<td>聞く（きく）</td>
+<td></td>
+</tr>
+<tr>
+<td>書く（==か==く）１</td>
+<td></td>
+</tr>
+<tr>
+<td>飲む</td>
+<td></td>
+</tr>
+<tr>
+<td>読む（よむ）</td>
+<td></td>
+</tr>
+<tr>
+<td>撮る（とる）</td>
+<td></td>
+</tr>
+<tr>
+<td>見る・見ます</td>
+<td></td>
+</tr>
+<tr>
+<td>食べる</td>
+<td></td>
+</tr>
+<tr>
+<td>する・します</td>
+<td></td>
+</tr>
+<tr>
+<td>パン</td>
+<td></td>
+</tr>
+<tr>
+<td>卵</td>
+<td></td>
+</tr>
+<tr>
+<td>肉（にく）</td>
+<td></td>
+</tr>
+<tr>
+<td>魚</td>
+<td></td>
+</tr>
+<tr>
+<td>野菜</td>
+<td></td>
+</tr>
+<tr>
+<td>果物（く==だ==もの）</td>
+<td></td>
+</tr>
+<tr>
+<td>水（みず）</td>
+<td></td>
+</tr>
+<tr>
+<td>お茶</td>
+<td></td>
+</tr>
+<tr>
+<td>紅茶（==こ==うちゃ）</td>
+<td></td>
+</tr>
+<tr>
+<td>牛乳</td>
+<td></td>
+</tr>
+<tr>
+<td>ジュース</td>
+<td></td>
+</tr>
+<tr>
+<td>ビール</td>
+<td></td>
+</tr>
+<tr>
+<td>お酒</td>
+<td></td>
+</tr>
+<tr>
+<td>煙草（たば==こ==）０</td>
+<td></td>
+</tr>
+<tr>
+<td>手紙（てがみ）</td>
+<td></td>
+</tr>
+<tr>
+<td>レポート</td>
+<td></td>
+</tr>
+<tr>
+<td>写真</td>
+<td></td>
+</tr>
+<tr>
+<td>ビデオ</td>
+<td></td>
+</tr>
+<tr>
+<td>店（みせ）２</td>
+<td></td>
+</tr>
+<tr>
+<td>庭（にわ）０</td>
+<td></td>
+</tr>
+<tr>
+<td>宿題（し==ゅ==く==だ==い）</td>
+<td></td>
+</tr>
+<tr>
+<td>テニス</td>
+<td></td>
+</tr>
+<tr>
+<td>サッカー</td>
+<td></td>
+</tr>
+<tr>
+<td>お花見</td>
+<td></td>
+</tr>
+<tr>
+<td>時々（と==きど==き）</td>
+<td></td>
+</tr>
+<tr>
+<td>分かりました。</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 文法</td>
+<td></td>
+</tr>
+<tr>
+<td>- 自动词与他动词</td>
+<td></td>
+</tr>
+<tr>
+<td>- 自动词是东西自己动</td>
+<td></td>
+</tr>
+<tr>
+<td>- 他动词是A让B动 用を</td>
+<td></td>
+</tr>
+<tr>
+<td>- を　接在体言后，表示他动词的作用对象</td>
+<td></td>
+</tr>
+<tr>
+<td>- お酒を飲みます。</td>
+<td></td>
+</tr>
+<tr>
+<td>- 新聞を読む。</td>
+<td></td>
+</tr>
+<tr>
+<td>- なに（何）をしますか。</td>
+<td></td>
+</tr>
+<tr>
+<td>- 使用なん的情况</td>
+<td></td>
+</tr>
+<tr>
+<td>- 后面是た・だ・な行</td>
+<td></td>
+</tr>
+<tr>
+<td>- 后面有具体量词</td>
+<td></td>
+</tr>
+<tr>
+<td>- 何歳・何年</td>
+<td></td>
+</tr>
+<tr>
+<td>- 使用なに的情况</td>
+<td></td>
+</tr>
+<tr>
+<td>- 其他时候</td>
+<td></td>
+</tr>
+<tr>
+<td>- 特别地，なにで可以明确表示在询问手段方法，而なんで可以询问手段、方法与理由</td>
+<td></td>
+</tr>
+<tr>
+<td>- で　接在体言后，表示地点 相当于at</td>
+<td></td>
+</tr>
+<tr>
+<td>- 駅で　会う。</td>
+<td></td>
+</tr>
+<tr>
+<td>- 教室で　勉強（べんきょう）する。</td>
+<td></td>
+</tr>
+<tr>
+<td>- 図書館で　本を読む。</td>
+<td></td>
+</tr>
+<tr>
+<td>- ～ましょう</td>
+<td></td>
+</tr>
+<tr>
+<td>- ～ませんが</td>
+<td></td>
+</tr>
+<tr>
+<td>- いつも</td>
+<td></td>
+</tr>
+<tr>
+<td>- ときどき</td>
+<td></td>
+</tr>
+<tr>
+<td>- それから</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
