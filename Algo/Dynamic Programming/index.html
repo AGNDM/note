@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://agndm.github.io/note/Algo/Dynamic%20Programming/">
       
       
+        <link rel="prev" href="../Approximate%20Algorithm/">
       
-      <link rel="icon" href="/note/assets/images/favicon.png">
+      
+        <link rel="next" href="../Review/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>AGNote</title>
+        <title>Dynamic Programming - AGNote</title>
       
     
     
-      <link rel="stylesheet" href="/note/assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/note/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/note/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-to-find-a-dp-algorithm" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/note/." title="AGNote" class="md-header__button md-logo" aria-label="AGNote" data-md-component="logo">
+    <a href="../.." title="AGNote" class="md-header__button md-logo" aria-label="AGNote" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Dynamic Programming
             
           </span>
         </div>
@@ -175,7 +186,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/note/." title="AGNote" class="md-nav__button md-logo" aria-label="AGNote" data-md-component="logo">
+    <a href="../.." title="AGNote" class="md-nav__button md-logo" aria-label="AGNote" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -193,7 +204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -212,18 +223,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -239,7 +252,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algo
@@ -253,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Algo/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -276,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Algo/Approximate%20Algorithm/" class="md-nav__link">
+      <a href="../Approximate%20Algorithm/" class="md-nav__link">
         
   
   
@@ -296,10 +309,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/note/Algo/Dynamic%20Programming/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Dynamic Programming
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -310,6 +343,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-a-dp-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to find a DP algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortest-path-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest Path Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest Path Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-bottom-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to bottom-up?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detect-negative-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detect Negative Cycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weighted-interval-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weighted Interval Scheduling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knapsack Problem
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -322,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Algo/Review/" class="md-nav__link">
+      <a href="../Review/" class="md-nav__link">
         
   
   
@@ -390,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/" class="md-nav__link">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/" class="md-nav__link">
         
   
   
@@ -451,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%201/" class="md-nav__link">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%201/" class="md-nav__link">
         
   
   
@@ -474,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%202/" class="md-nav__link">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%202/" class="md-nav__link">
         
   
   
@@ -497,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%203/" class="md-nav__link">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%203/" class="md-nav__link">
         
   
   
@@ -520,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Matrix%20Calculus/" class="md-nav__link">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Matrix%20Calculus/" class="md-nav__link">
         
   
   
@@ -596,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/%E6%97%A5%E6%9C%AC%E8%AA%9E/" class="md-nav__link">
+      <a href="../../%E6%97%A5%E6%9C%AC%E8%AA%9E/" class="md-nav__link">
         
   
   
@@ -619,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/%E6%97%A5%E6%9C%AC%E8%AA%9E/%E6%97%A5%E8%AF%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+      <a href="../../%E6%97%A5%E6%9C%AC%E8%AA%9E/%E6%97%A5%E8%AF%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
         
   
   
@@ -660,6 +771,74 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-a-dp-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to find a DP algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortest-path-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest Path Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest Path Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-bottom-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to bottom-up?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detect-negative-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detect Negative Cycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weighted-interval-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weighted Interval Scheduling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knapsack-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knapsack Problem
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -670,8 +849,125 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+  <h1>Dynamic Programming</h1>
+
+<h2 id="how-to-find-a-dp-algorithm">How to find a DP algorithm<a class="headerlink" href="#how-to-find-a-dp-algorithm" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Describe <span class="arithmatex">\(f(x)\)</span> in words</li>
+<li>Find base cases and recursions and form this,
+$$
+f(x) =
+\begin{cases}
+\text{base case}\quad x=\text{some special numbers} \
+\text{something contains <span class="arithmatex">\(f(m)\)</span> where }m&lt;x
+\end{cases}
+$$</li>
+<li>Memorization: Add a lookup table to recursive code so that future calls to <span class="arithmatex">\(f\)</span> with the same arguments can return immediately
+So the final product is like,
+$$
+f(x) =
+\begin{cases}
+\text{base case}\quad &amp;x=\text{some special numbers} \
+Memo[x]\text{ in the memo}\quad &amp;\text{if it is computed before}\
+\text{something contains <span class="arithmatex">\(f(m)\)</span> where }m&lt;x &amp;\text{compute through recurtion}
+\end{cases}
+$$</li>
+</ol>
+<h2 id="shortest-path-example">Shortest Path Example<a class="headerlink" href="#shortest-path-example" title="Permanent link">&para;</a></h2>
+<p>We'll apply this principle to the shortest path problem
+1.  <span class="arithmatex">\(f(t)\)</span> by word
+$$
+    f(t) = \text{the shortest path from s to t}
+$$
+2. <span class="arithmatex">\(f(t)\)</span> with base case and recursion
+$$
+f(t)=
+\begin{cases}
+0,\quad &amp;if\; t=s \
+\infty,\quad&amp;if\,indegree(t)=0 \
+\min_{e=(a,t)} 
+\begin{cases}
+weight(a,t)+f(a)},
+\end{cases}&amp;otherwise
+\end{cases}
+$$
+3. Memorization: if <span class="arithmatex">\(f(t)\)</span> is called, save it to <span class="arithmatex">\(Memo[t]\)</span>
+$$
+f(t)=
+\begin{cases}
+0,\quad &amp;if\; t=s \
+\infty,\quad&amp;if\,indegree(t)=0 \
+Memo[t], &amp;if\,in\,memo \
+\min_{e=(a,t)} 
+\begin{cases}
+weight(a,t)+f(a)},
+\end{cases}&amp;otherwise
+\end{cases}
+$$</p>
+<p>This is a Top-Bottom algorithm and  we <strong>cannot</strong> deal with negative edges. If we do this bottom-up we'll get Bellman-Ford algorithm which can deal with negative edges.</p>
+<h3 id="how-to-bottom-up">How to bottom-up?<a class="headerlink" href="#how-to-bottom-up" title="Permanent link">&para;</a></h3>
+<p>The essence of bottom-up lies in the way of memorization. In the top-down algo, we memorize in recursions. However, in bottom-up algo, we memorize first. In other words, the depth of recursion stack is at most 1.</p>
+<p>It's simple to get a bottom-up version. To <strong>bottom</strong>-up, we should start from s instead of t. For every edges going out from s (or <span class="arithmatex">\(e\in \mathbb{E}\)</span> if there's negative edges), we apply <span class="arithmatex">\(f(t)\)</span> to them.</p>
+<h3 id="detect-negative-cycles">Detect Negative Cycles<a class="headerlink" href="#detect-negative-cycles" title="Permanent link">&para;</a></h3>
+<p>If negative cycles is reachable from <span class="arithmatex">\(s\)</span>, we use Bellman-Ford.</p>
+<p>If not (which means it's not a DAG), we create a virtual sink <span class="arithmatex">\(s_v\)</span> and <span class="arithmatex">\(\forall v\in \mathbb{V}\)</span>, we form an edge <span class="arithmatex">\((s_{k},v)\)</span> with weight of 0. We turn it into a DAG without creating new possible negative cycles.</p>
+<h2 id="weighted-interval-scheduling">Weighted Interval Scheduling<a class="headerlink" href="#weighted-interval-scheduling" title="Permanent link">&para;</a></h2>
+<p>![[Pasted image 20250617001849.png]]
+- Job <span class="arithmatex">\(j_{1},j_{2},\dots j_{n}\)</span> where <span class="arithmatex">\(finish(j_{1})\leq finishj_{2}\leq\dots\leq finish(j_{n})\)</span>
+- <span class="arithmatex">\(p(j_i)=j_{k}\)</span> if <span class="arithmatex">\(j_k\)</span> 
+    - is the largest index of job which is incompatible with <span class="arithmatex">\(j_i\)</span>
+    - <span class="arithmatex">\(&lt;j_{i}\)</span>
+1. Word def
+$$
+\begin{align}
+    f(x)=&amp;\text{the maximum total weight of a set of mutually compatible jobs that can be selected from the first j jobs}\
+    &amp;\text{i.e., from the subset of jobs {1, 2, ..., j}}
+\end{align}
+$$
+2. Recursion def
+$$
+f(j)=
+\begin{cases}
+0,\quad &amp;if\;j=0 \
+\max(f(j-1), f(p(j)))&amp;otherwise
+\end{cases}
+$$
+3. Memorization
+$$
+f(j)=
+\begin{cases}
+0,\quad &amp;if\;j=0 \
+Memo[j]&amp;if\;in\;memo \
+\max(f(j-1), f(p(j)))&amp;otherwise
+\end{cases}
+$$
+4. Bottom up: compute <span class="arithmatex">\(Memo[1],Memo[2],\dots,Memo[n]\)</span> one after another by transforming the formula in 3.</p>
+<h2 id="knapsack-problem">Knapsack Problem<a class="headerlink" href="#knapsack-problem" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+OPT(i,w)=
+\begin{cases}
+0,\quad &amp; i=0 \\
+OPT(i-1,w) &amp; w_{i}&gt;w \\
+\max\{OPT(i-1,w), OPT(i-1,w-w_{i})\}&amp;otherwise
+\end{cases}
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -707,10 +1003,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/note/", "features": [], "search": "/note/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/note/assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
