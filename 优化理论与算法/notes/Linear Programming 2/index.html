@@ -876,13 +876,13 @@
 </tr>
 </tbody>
 </table>
-<p>Turn <span class="arithmatex">\(A^T = (A_{B}\; A_{N})\)</span> into 
-$$
+<p>Turn <span class="arithmatex">\(A^T = (A_{B}\; A_{N})\)</span> into </p>
+<div class="arithmatex">\[
 \begin{pmatrix}
  I\;A'
 \end{pmatrix}
 = A_{B}^{-1}A
-$$</p>
+\]</div>
 <p>Note that <span class="arithmatex">\(A_B^{-1}\)</span> is <span class="arithmatex">\(m\times m\)</span> and <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m\times n\)</span>.</p>
 <table>
 <thead>
@@ -945,32 +945,32 @@ $$
     A_{ki}x_{i}+A_{kj}x_{j}=b_{k}
 $$</p>
 <blockquote>
-<p>很简单地，我们考虑只有一个约束和两个变量的例子：
-$$
+<p>很简单地，我们考虑只有一个约束和两个变量的例子：</p>
+<div class="arithmatex">\[
   ax_{1}+bx_{2}=c
-$$
-$$
-\begin{align<em>}
-  x_{1},x_{2} \ge 0\
-\end{align</em>}
-$$
-首先在规范型中<span class="arithmatex">\(b=1\)</span>，因此我们可以在这里假设<span class="arithmatex">\(b&gt;0\)</span>
+\]</div>
+<div class="arithmatex">\[
+\begin{align*}
+  x_{1},x_{2} \ge 0\\
+\end{align*}
+\]</div>
+<p>首先在规范型中<span class="arithmatex">\(b=1\)</span>，因此我们可以在这里假设<span class="arithmatex">\(b&gt;0\)</span>
 其次，由于在变换前，<span class="arithmatex">\(x_{2} = \frac{c}{b} \ge 0\)</span>所以我们有<span class="arithmatex">\(c \ge 0\)</span>，</p>
 <p>我们要用<span class="arithmatex">\(x_{1}\)</span>替换<span class="arithmatex">\(x_{2}\)</span>
-如果<span class="arithmatex">\(a&gt;0\)</span>，那么
-$$
-\begin{align<em>}
-\max x_{1}=\frac{1}{a}(c-bx_{2})&amp;=\frac{c}{a}\
+如果<span class="arithmatex">\(a&gt;0\)</span>，那么</p>
+<div class="arithmatex">\[
+\begin{align*}
+\max x_{1}=\frac{1}{a}(c-bx_{2})&amp;=\frac{c}{a}\\
   x_{2}&amp;=0\text{ 时取到}
-\end{align</em>}
-$$
-如果<span class="arithmatex">\(a&lt;0\)</span>，那么
-$$
-\begin{align<em>}
-\max x_{1}=\frac{1}{-a}(bx_{2}-c)&amp;= \infty\text{ 无界}\
+\end{align*}
+\]</div>
+<p>如果<span class="arithmatex">\(a&lt;0\)</span>，那么</p>
+<div class="arithmatex">\[
+\begin{align*}
+\max x_{1}=\frac{1}{-a}(bx_{2}-c)&amp;= \infty\text{ 无界}\\
 x_{2}&amp;=\infty\text{ 时取到}
-\end{align</em>}
-$$</p>
+\end{align*}
+\]</div>
 </blockquote>
 <p>回到原本的问题，将<span class="arithmatex">\(A_{kj} = 1\)</span>(规范型)带入，
 $$

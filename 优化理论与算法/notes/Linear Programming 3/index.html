@@ -795,60 +795,60 @@
 
 <h2 id="_1">如何寻找初始基本可行解<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">两阶段法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>对于原问题
-$$
-\begin{align<em>}
-    minimize_{x}\quad c^Tx&amp;\
-    subject\;to\quad Ax&amp;=b\
+<p>对于原问题</p>
+<div class="arithmatex">\[
+\begin{align*}
+    minimize_{x}\quad c^Tx&amp;\\
+    subject\;to\quad Ax&amp;=b\\
     x &amp;\ge 0
-\end{align</em>}
-$$
-使用辅助问题
-$$
-\begin{align<em>}
-    minimize_{x,y}\quad e^Ty&amp;\
-    subject\;to\quad Ax+y&amp;=b \
-    x,y&amp;\ge 0 \
-    \
+\end{align*}
+\]</div>
+<p>使用辅助问题</p>
+<div class="arithmatex">\[
+\begin{align*}
+    minimize_{x,y}\quad e^Ty&amp;\\
+    subject\;to\quad Ax+y&amp;=b \\
+    x,y&amp;\ge 0 \\
+    \\
     where\quad e = 
 \begin{pmatrix}
-1 \
-1 \
-\vdots \
+1 \\
+1 \\
+\vdots \\
 1
-\end{pmatrix} <br />
-\end{align</em>}
-$$
-不妨假设<span class="arithmatex">\(b \ge 0\)</span>，这个问题有基本可行解
-$$
+\end{pmatrix}   
+\end{align*}
+\]</div>
+<p>不妨假设<span class="arithmatex">\(b \ge 0\)</span>，这个问题有基本可行解</p>
+<div class="arithmatex">\[
 X^*=
 \begin{cases}
-     x=0\
+     x=0\\
      y=b \ge 0
 \end{cases}
-$$
-从<span class="arithmatex">\(X^*\)</span>开始，我们进行单纯形法求解
-1. 如果最终的最优值不为0，则原问题不可行
-2. 否则，<span class="arithmatex">\(X^*\)</span>就是原问题的一个初始可行解</p>
+\]</div>
+<p>从<span class="arithmatex">\(X^*\)</span>开始，我们进行单纯形法求解
+    1. 如果最终的最优值不为0，则原问题不可行
+    2. 否则，<span class="arithmatex">\(X^*\)</span>就是原问题的一个初始可行解</p>
 <p>使用这一方法需要注意构造时要使<span class="arithmatex">\(b \ge 0\)</span>并化成<strong>规范型</strong></p>
 <h3 id="m">大M法<a class="headerlink" href="#m" title="Permanent link">&para;</a></h3>
 <p>核心思想是用一个很大的惩罚M来达到两阶段法的第一阶段，然后自然而然转向第二阶段
-构造辅助问题
-$$
-\begin{align<em>}
-    minimize_{x}\quad c^Tx+M&amp; \sum_{i=1}^m y_{i}\
-    subject\;to\quad Ax+y&amp;=b\
+构造辅助问题</p>
+<div class="arithmatex">\[
+\begin{align*}
+    minimize_{x}\quad c^Tx+M&amp; \sum_{i=1}^m y_{i}\\
+    subject\;to\quad Ax+y&amp;=b\\
     x,y &amp;\ge 0
-\end{align</em>}
-$$
-这个问题有初始可行解
-$$
+\end{align*}
+\]</div>
+<p>这个问题有初始可行解</p>
+<div class="arithmatex">\[
 X_{init}=
 \begin{cases}
-x=0 \
+x=0 \\
 y=b
 \end{cases}
-$$</p>
+\]</div>
 <h3 id="_3">布兰德法则<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>始终选择下标最小的那个入基/出基，就不会出现循环
 证明见<span class="arithmatex">\(Bertsimas \S 3.4\)</span></p>
