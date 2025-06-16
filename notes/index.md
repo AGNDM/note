@@ -15,4 +15,5 @@
 ---
 
 > Please [star](https://github.com/AGNDM/note) me if this helps!
-> [RRG Gaming](https://rrg.eastus.cloudapp.azure.com/) my e-sports club
+>
+> [RRG Gaming](https://rrg.eastus.cloudapp.azure.com/)  Our E-sports Club
