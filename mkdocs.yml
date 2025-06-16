@@ -4,7 +4,7 @@ site_url: https://agndm.github.io/note/ # 替换为您的实际网址
 # 告诉MkDocs您的Markdown笔记在哪里
 # 如果笔记在仓库根目录，用 '.'
 # 如果笔记在一个名为 'notes' 的文件夹里，用 'notes'
-docs_dir: . 
+docs_dir: notes 
 
 theme:
   name: material  # 使用 Material 主题，非常美观
