@@ -858,56 +858,64 @@
 <h2 id="how-to-find-a-dp-algorithm">How to find a DP algorithm<a class="headerlink" href="#how-to-find-a-dp-algorithm" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Describe <span class="arithmatex">\(f(x)\)</span> in words</li>
-<li>Find base cases and recursions and form this,
-$$
-f(x) =
-\begin{cases}
-\text{base case}\quad x=\text{some special numbers} \
-\text{something contains <span class="arithmatex">\(f(m)\)</span> where }m&lt;x
-\end{cases}
-$$</li>
-<li>Memorization: Add a lookup table to recursive code so that future calls to <span class="arithmatex">\(f\)</span> with the same arguments can return immediately
-So the final product is like,
-$$
-f(x) =
-\begin{cases}
-\text{base case}\quad &amp;x=\text{some special numbers} \
-Memo[x]\text{ in the memo}\quad &amp;\text{if it is computed before}\
-\text{something contains <span class="arithmatex">\(f(m)\)</span> where }m&lt;x &amp;\text{compute through recurtion}
-\end{cases}
-$$</li>
+<li>Find base cases and recursions and form this,</li>
 </ol>
+<div class="arithmatex">\[
+f(x) =
+\begin{cases}
+\text{base case}\quad x=\text{some special numbers} \\
+\text{something contains $f(m)$ where }m&lt;x
+\end{cases}
+\]</div>
+<ol>
+<li>Memorization: Add a lookup table to recursive code so that future calls to <span class="arithmatex">\(f\)</span> with the same arguments can return immediately
+So the final product is like,</li>
+</ol>
+<div class="arithmatex">\[
+f(x) =
+\begin{cases}
+\text{base case}\quad &amp;x=\text{some special numbers} \\
+Memo[x]\text{ in the memo}\quad &amp;\text{if it is computed before}\\
+\text{something contains $f(m)$ where }m&lt;x &amp;\text{compute through recurtion}
+\end{cases}
+\]</div>
 <h2 id="shortest-path-example">Shortest Path Example<a class="headerlink" href="#shortest-path-example" title="Permanent link">&para;</a></h2>
-<p>We'll apply this principle to the shortest path problem
-1.  <span class="arithmatex">\(f(t)\)</span> by word
-$$
+<p>We'll apply this principle to the shortest path problem</p>
+<ol>
+<li><span class="arithmatex">\(f(t)\)</span> by word</li>
+</ol>
+<div class="arithmatex">\[
     f(t) = \text{the shortest path from s to t}
-$$
-2. <span class="arithmatex">\(f(t)\)</span> with base case and recursion
-$$
+\]</div>
+<ol>
+<li><span class="arithmatex">\(f(t)\)</span> with base case and recursion</li>
+</ol>
+<div class="arithmatex">\[
 f(t)=
 \begin{cases}
-0,\quad &amp;if\; t=s \
-\infty,\quad&amp;if\,indegree(t)=0 \
+0,\quad &amp;if\; t=s \\
+\infty,\quad&amp;if\,indegree(t)=0 \\
 \min_{e=(a,t)} 
 \begin{cases}
-weight(a,t)+f(a)},
+weight(a,t)+f(a)\},
 \end{cases}&amp;otherwise
 \end{cases}
-$$
-3. Memorization: if <span class="arithmatex">\(f(t)\)</span> is called, save it to <span class="arithmatex">\(Memo[t]\)</span>
-$$
+\]</div>
+<ol>
+<li>Memorization: if <span class="arithmatex">\(f(t)\)</span> is called, save it to <span class="arithmatex">\(Memo[t]\)</span></li>
+</ol>
+<div class="arithmatex">\[
 f(t)=
 \begin{cases}
-0,\quad &amp;if\; t=s \
-\infty,\quad&amp;if\,indegree(t)=0 \
-Memo[t], &amp;if\,in\,memo \
+0,\quad &amp;if\; t=s \\
+\infty,\quad&amp;if\,indegree(t)=0 \\
+Memo[t], &amp;if\,in\,memo \\
 \min_{e=(a,t)} 
 \begin{cases}
-weight(a,t)+f(a)},
+weight(a,t)+f(a)\},
 \end{cases}&amp;otherwise
 \end{cases}
-$$</p>
+\]</div>
 <p>This is a Top-Bottom algorithm and  we <strong>cannot</strong> deal with negative edges. If we do this bottom-up we'll get Bellman-Ford algorithm which can deal with negative edges.</p>
 <h3 id="how-to-bottom-up">How to bottom-up?<a class="headerlink" href="#how-to-bottom-up" title="Permanent link">&para;</a></h3>
 <p>The essence of bottom-up lies in the way of memorization. In the top-down algo, we memorize in recursions. However, in bottom-up algo, we memorize first. In other words, the depth of recursion stack is at most 1.</p>
@@ -916,36 +924,50 @@ $$</p>
 <p>If negative cycles is reachable from <span class="arithmatex">\(s\)</span>, we use Bellman-Ford.</p>
 <p>If not (which means it's not a DAG), we create a virtual sink <span class="arithmatex">\(s_v\)</span> and <span class="arithmatex">\(\forall v\in \mathbb{V}\)</span>, we form an edge <span class="arithmatex">\((s_{k},v)\)</span> with weight of 0. We turn it into a DAG without creating new possible negative cycles.</p>
 <h2 id="weighted-interval-scheduling">Weighted Interval Scheduling<a class="headerlink" href="#weighted-interval-scheduling" title="Permanent link">&para;</a></h2>
-<p>![[Pasted image 20250617001849.png]]
-- Job <span class="arithmatex">\(j_{1},j_{2},\dots j_{n}\)</span> where <span class="arithmatex">\(finish(j_{1})\leq finishj_{2}\leq\dots\leq finish(j_{n})\)</span>
-- <span class="arithmatex">\(p(j_i)=j_{k}\)</span> if <span class="arithmatex">\(j_k\)</span> 
-    - is the largest index of job which is incompatible with <span class="arithmatex">\(j_i\)</span>
-    - <span class="arithmatex">\(&lt;j_{i}\)</span>
-1. Word def
-$$
+<p>![[Pasted image 20250617001849.png]]</p>
+<ul>
+<li>
+<p>Job <span class="arithmatex">\(j_{1},j_{2},\dots j_{n}\)</span> where <span class="arithmatex">\(finish(j_{1})\leq finishj_{2}\leq\dots\leq finish(j_{n})\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(p(j_i)=j_{k}\)</span> if <span class="arithmatex">\(j_k\)</span> </p>
+<ul>
+<li>is the largest index of job which is incompatible with <span class="arithmatex">\(j_i\)</span></li>
+<li><span class="arithmatex">\(&lt;j_{i}\)</span></li>
+</ul>
+</li>
+<li>Word def</li>
+</ul>
+<div class="arithmatex">\[
 \begin{align}
-    f(x)=&amp;\text{the maximum total weight of a set of mutually compatible jobs that can be selected from the first j jobs}\
-    &amp;\text{i.e., from the subset of jobs {1, 2, ..., j}}
+    f(x)=&amp;\text{the maximum total weight of a set of mutually compatible jobs that can be selected from the first j jobs}\\
+    &amp;\text{i.e., from the subset of jobs \{1, 2, ..., j\}}
 \end{align}
-$$
-2. Recursion def
-$$
+\]</div>
+<ol>
+<li>Recursion def</li>
+</ol>
+<div class="arithmatex">\[
 f(j)=
 \begin{cases}
-0,\quad &amp;if\;j=0 \
+0,\quad &amp;if\;j=0 \\
 \max(f(j-1), f(p(j)))&amp;otherwise
 \end{cases}
-$$
-3. Memorization
-$$
+\]</div>
+<ol>
+<li>Memorization</li>
+</ol>
+<div class="arithmatex">\[
 f(j)=
 \begin{cases}
-0,\quad &amp;if\;j=0 \
-Memo[j]&amp;if\;in\;memo \
+0,\quad &amp;if\;j=0 \\
+Memo[j]&amp;if\;in\;memo \\
 \max(f(j-1), f(p(j)))&amp;otherwise
 \end{cases}
-$$
-4. Bottom up: compute <span class="arithmatex">\(Memo[1],Memo[2],\dots,Memo[n]\)</span> one after another by transforming the formula in 3.</p>
+\]</div>
+<ol>
+<li>Bottom up: compute <span class="arithmatex">\(Memo[1],Memo[2],\dots,Memo[n]\)</span> one after another by transforming the formula in 3.</li>
+</ol>
 <h2 id="knapsack-problem">Knapsack Problem<a class="headerlink" href="#knapsack-problem" title="Permanent link">&para;</a></h2>
 <div class="arithmatex">\[
 OPT(i,w)=
