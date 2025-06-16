@@ -449,7 +449,7 @@
   
   
   <span class="md-ellipsis">
-    Simplex method
+    Linear Programming 2
     
   </span>
   
@@ -646,44 +646,128 @@
 
   <h1>Approximate algo</h1>
 
-<p>![[approx_lec.pdf]]
-- <strong>Scheme</strong> and <strong>Algorithm</strong>
-    - <span class="arithmatex">\(n\)</span> is the scale of input
-    - the cost <span class="arithmatex">\(C\)</span> we mentioned in the note in fact is more  similar to the meaning of <strong>value</strong> in <strong>maximization problems</strong>
-    - So when considering maximization, we want the value <span class="arithmatex">\(C\)</span> to be as much as possible. In other words, we should minimize <span class="arithmatex">\(\frac {C_{opt}} C\)</span>.
-    - Conversely, in minimization problems, we focus on <span class="arithmatex">\(\frac{C}{C_{opt}}\)</span>.
-    - Furthermore, we can play around <span class="arithmatex">\(\omega(n)\)</span> using <span class="arithmatex">\(\epsilon\)</span>. This becomes a <strong>scheme</strong> because the <span class="arithmatex">\(\epsilon\)</span> is an arbitrary number.
-- <strong>PTAS</strong> vs <strong>FPTAS</strong>(poly in both n and <span class="arithmatex">\(\frac{1}{\epsilon}\)</span>)
-- Vertex Cover
-    - Greedy: choose the one with the ==possible maximum== degree(good in practice bad in theory)
-    - Random: Simply taking random edges(u, v) and pick vertices u &amp; v
-        - 2-approx algo:
-            - <span class="arithmatex">\(A\)</span> = edges that are picked
-            - <span class="arithmatex">\(C\)</span> = <span class="arithmatex">\(2|A|\)</span> vertices are picked (that's where '2' comes from)
-            - No two edges in <span class="arithmatex">\(A\)</span> share the same point and we have to cover every edges (at least half of the vertices) in <span class="arithmatex">\(A\)</span> so  <span class="arithmatex">\(C_{opt} &gt;= |A|\)</span> 
-            -  So <span class="arithmatex">\(C &lt;= 2C_{opt}\)</span> 
-- Set Cover
-    - <strong>Def</strong> Set <span class="arithmatex">\(X\)</span> and subsets <span class="arithmatex">\(S_i\)</span> , Minimizing # of subsets while covering the set <span class="arithmatex">\(X\)</span> 
-    - Greedy: Always select the <strong>largest</strong> subset
-        - a <span class="arithmatex">\((\ln{(n)} + 1)\)</span>-approx algo (whats the bound?)
-        - Assume <span class="arithmatex">\(|C_{opt}| \; = \; t\)</span>  <span class="arithmatex">\(X_k\;=\;elements \;in\; iteration\; k\)</span> . So for any <span class="arithmatex">\(k\)</span> we can cover it using <span class="arithmatex">\(t\)</span> sets. 
-            - One of them at least cover <span class="arithmatex">\(\frac{|X_k|}{t}\)</span> elements
-            - So the one we pick should be greater than <span class="arithmatex">\(\frac{|X_k|}{t}\)</span>
-            - So we have <span class="arithmatex">\(<span class="arithmatex">\(\forall k,\quad |X_{k+1}| \le (1-\frac{1}{t})|X_k|\)</span>\)</span>
-            - When <span class="arithmatex">\(X_k\; = \; 0\)</span> we're done
-            - So inductively we have,$$
-\forall k,\quad |X_k|\le(1-\frac{1}{t})^kn \le\,\ldots some\; math\ldots\le e^{-\frac{k}{n}}n 
-$$
-- Partition
-    - Partition <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>
-    - Goal: maintain the balance as much as possible
-     $$
+<p>![[approx_lec.pdf]]</p>
+<ul>
+<li>
+<p><strong>Scheme</strong> and <strong>Algorithm</strong></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(n\)</span> is the scale of input</p>
+</li>
+<li>
+<p>the cost <span class="arithmatex">\(C\)</span> we mentioned in the note in fact is more  similar to the meaning of <strong>value</strong> in <strong>maximization problems</strong></p>
+</li>
+<li>
+<p>So when considering maximization, we want the value <span class="arithmatex">\(C\)</span> to be as much as possible. In other words, we should minimize <span class="arithmatex">\(\frac {C_{opt}} C\)</span>.</p>
+</li>
+<li>
+<p>Conversely, in minimization problems, we focus on <span class="arithmatex">\(\frac{C}{C_{opt}}\)</span>.</p>
+</li>
+<li>
+<p>Furthermore, we can play around <span class="arithmatex">\(\omega(n)\)</span> using <span class="arithmatex">\(\epsilon\)</span>. This becomes a <strong>scheme</strong> because the <span class="arithmatex">\(\epsilon\)</span> is an arbitrary number.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>PTAS</strong> vs <strong>FPTAS</strong>(poly in both n and <span class="arithmatex">\(\frac{1}{\epsilon}\)</span>)</p>
+</li>
+<li>
+<p>Vertex Cover</p>
+<ul>
+<li>
+<p>Greedy: choose the one with the ==possible maximum== degree(good in practice bad in theory)</p>
+</li>
+<li>
+<p>Random: Simply taking random edges(u, v) and pick vertices u &amp; v</p>
+<ul>
+<li>
+<p>2-approx algo:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(A\)</span> = edges that are picked</p>
+</li>
+<li>
+<p><span class="arithmatex">\(C\)</span> = <span class="arithmatex">\(2|A|\)</span> vertices are picked (that's where '2' comes from)</p>
+</li>
+<li>
+<p>No two edges in <span class="arithmatex">\(A\)</span> share the same point and we have to cover every edges (at least half of the vertices) in <span class="arithmatex">\(A\)</span> so  <span class="arithmatex">\(C_{opt} &gt;= |A|\)</span> </p>
+</li>
+<li>
+<p>So <span class="arithmatex">\(C &lt;= 2C_{opt}\)</span> </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Set Cover</p>
+<ul>
+<li>
+<p><strong>Def</strong> Set <span class="arithmatex">\(X\)</span> and subsets <span class="arithmatex">\(S_i\)</span> , Minimizing # of subsets while covering the set <span class="arithmatex">\(X\)</span> </p>
+</li>
+<li>
+<p>Greedy: Always select the <strong>largest</strong> subset</p>
+<ul>
+<li>
+<p>a <span class="arithmatex">\((\ln{(n)} + 1)\)</span>-approx algo (whats the bound?)</p>
+</li>
+<li>
+<p>Assume <span class="arithmatex">\(|C_{opt}| \; = \; t\)</span>  <span class="arithmatex">\(X_k\;=\;elements \;in\; iteration\; k\)</span> . So for any <span class="arithmatex">\(k\)</span> we can cover it using <span class="arithmatex">\(t\)</span> sets. </p>
+<ul>
+<li>
+<p>One of them at least cover <span class="arithmatex">\(\frac{|X_k|}{t}\)</span> elements</p>
+</li>
+<li>
+<p>So the one we pick should be greater than <span class="arithmatex">\(\frac{|X_k|}{t}\)</span></p>
+</li>
+<li>
+<p>So we have <span class="arithmatex">\(<span class="arithmatex">\(\forall k,\quad |X_{k+1}| \le (1-\frac{1}{t})|X_k|\)</span>\)</span></p>
+</li>
+<li>
+<p>When <span class="arithmatex">\(X_k\; = \; 0\)</span> we're done</p>
+</li>
+<li>
+<p>So inductively we have,$$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>\forall k,\quad |X_k|\le(1-\frac{1}{t})^kn \le\,\ldots some\; math\ldots\le e^{-\frac{k}{n}}n 
+$$</p>
+<ul>
+<li>
+<p>Partition</p>
+<ul>
+<li>
+<p>Partition <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span></p>
+</li>
+<li>
+<p>Goal: maintain the balance as much as possible</p>
+</li>
+</ul>
+<p>$$
 2L=sum\;of\;all\;the\;weights
 $$
-    - optimal solution<span class="arithmatex">\(\ge L\)</span>
-    - Do a brute-force in the range of <span class="arithmatex">\(m\)</span> 
-    - Do the rest in an easier way
-    - In this case the cost <span class="arithmatex">\(C\)</span> should be <span class="arithmatex">\(\omega(A)\)</span> (or <span class="arithmatex">\(\omega(B)\)</span>) and the <span class="arithmatex">\(C_{opt}\)</span> is L. Thus, the ratio <span class="arithmatex">\(\rho(n)\)</span> is the upper bound on <span class="arithmatex">\(\frac{\omega(A)}{L}\)</span>.</p>
+- optimal solution<span class="arithmatex">\(\ge L\)</span></p>
+<ul>
+<li>
+<p>Do a brute-force in the range of <span class="arithmatex">\(m\)</span> </p>
+</li>
+<li>
+<p>Do the rest in an easier way</p>
+</li>
+<li>
+<p>In this case the cost <span class="arithmatex">\(C\)</span> should be <span class="arithmatex">\(\omega(A)\)</span> (or <span class="arithmatex">\(\omega(B)\)</span>) and the <span class="arithmatex">\(C_{opt}\)</span> is L. Thus, the ratio <span class="arithmatex">\(\rho(n)\)</span> is the upper bound on <span class="arithmatex">\(\frac{\omega(A)}{L}\)</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
 
 
 

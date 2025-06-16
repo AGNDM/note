@@ -22,7 +22,7 @@
     
     
       
-        <title>Simplex method - AGNote</title>
+        <title>Linear Programming 2 - AGNote</title>
       
     
     
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Simplex method
+              Linear Programming 2
             
           </span>
         </div>
@@ -449,15 +449,13 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Simplex method
+    Linear Programming 2
     
   </span>
   
@@ -470,7 +468,7 @@
   
   
   <span class="md-ellipsis">
-    Simplex method
+    Linear Programming 2
     
   </span>
   
@@ -483,8 +481,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -493,6 +489,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#simplex-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplex method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplex method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       规范型
@@ -515,16 +521,15 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       检验最优
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="检验最优">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
@@ -547,14 +552,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="最终的函数值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       检验数
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -736,8 +747,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -746,6 +755,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#simplex-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplex method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplex method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       规范型
@@ -768,16 +787,15 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       检验最优
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="检验最优">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
@@ -800,14 +818,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="最终的函数值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       检验数
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -827,13 +851,15 @@
 
 
 
-<h1 id="simplex-method">Simplex method<a class="headerlink" href="#simplex-method" title="Permanent link">&para;</a></h1>
-<h2 id="_1">规范型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+  <h1>Linear Programming 2</h1>
+
+<h2 id="simplex-method">Simplex method<a class="headerlink" href="#simplex-method" title="Permanent link">&para;</a></h2>
+<h3 id="_1">规范型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ol>
 <li>目标函数和基变量无关</li>
 <li>基矩阵是单位矩阵</li>
 </ol>
-<h3 id="_2">如何获取？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="_2">如何获取？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -856,8 +882,8 @@ $$
  I\;A'
 \end{pmatrix}
 = A_{B}^{-1}A
-$$
-Note that <span class="arithmatex">\(A_B^{-1}\)</span> is <span class="arithmatex">\(m\times m\)</span> and <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m\times n\)</span>.</p>
+$$</p>
+<p>Note that <span class="arithmatex">\(A_B^{-1}\)</span> is <span class="arithmatex">\(m\times m\)</span> and <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m\times n\)</span>.</p>
 <table>
 <thead>
 <tr>
@@ -890,16 +916,30 @@ Note that <span class="arithmatex">\(A_B^{-1}\)</span> is <span class="arithmate
 </tr>
 </tbody>
 </table>
-<h2 id="_3">检验最优<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_3">检验最优<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>如果<span class="arithmatex">\(c_{规范型}\)</span>中全都是正的，那么就已经最优了，因为没有减小的空间了</p>
 <h3 id="_4">变换基<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(\exists c_{i}&lt;0\)</span>，需要变换基
-我们假设需要用<span class="arithmatex">\(x_i\)</span>把<span class="arithmatex">\(x_j\)</span>换掉，那么我们考虑<span class="arithmatex">\(x_j\)</span>的一些性质：
-1. <span class="arithmatex">\(x_j=b_{k}\)</span>， <span class="arithmatex">\(k\)</span>是<span class="arithmatex">\(x_j\)</span>作为基的那一行
-2. 除了第<span class="arithmatex">\(k\)</span>行，其他行都没有<span class="arithmatex">\(x_j\)</span>的出现，这是由规范型所保证的
-3. 我们单独考察第<span class="arithmatex">\(k\)</span>行，也就是第<span class="arithmatex">\(k\)</span>个等式：
-    1. 这个等式中，<span class="arithmatex">\(x_j\)</span>是唯一一个系数不为0且本身不为0的数
-    2. <span class="arithmatex">\(x_i\)</span>的系数非零</p>
+我们假设需要用<span class="arithmatex">\(x_i\)</span>把<span class="arithmatex">\(x_j\)</span>换掉，那么我们考虑<span class="arithmatex">\(x_j\)</span>的一些性质：</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x_j=b_{k}\)</span>， <span class="arithmatex">\(k\)</span>是<span class="arithmatex">\(x_j\)</span>作为基的那一行</p>
+</li>
+<li>
+<p>除了第<span class="arithmatex">\(k\)</span>行，其他行都没有<span class="arithmatex">\(x_j\)</span>的出现，这是由规范型所保证的</p>
+</li>
+<li>
+<p>我们单独考察第<span class="arithmatex">\(k\)</span>行，也就是第<span class="arithmatex">\(k\)</span>个等式：</p>
+<ol>
+<li>
+<p>这个等式中，<span class="arithmatex">\(x_j\)</span>是唯一一个系数不为0且本身不为0的数</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x_i\)</span>的系数非零</p>
+</li>
+</ol>
+</li>
+</ol>
 <p>所以我们可以发现，要使第<span class="arithmatex">\(k\)</span>行继续成立，我们必须要保证
 $$
     A_{ki}x_{i}+A_{kj}x_{j}=b_{k}
@@ -955,7 +995,7 @@ $$
 \min c^Tx \rightarrow \min c^Tx-b_{k} \rightarrow \min c^Tx-A_{k}^Tx \quad where\;A_{k}^Tx=b_{k}
 $$
 其确定性的部分<span class="arithmatex">\(b_k\)</span>自然而然地被我们以相反数的形式记录在了<span class="arithmatex">\(balance\)</span>里，而表中的目标函数块（不确定的部分）被我们维护着始终取最小值也就是0（通过对<span class="arithmatex">\(x\)</span>的赋值），直到我们发现没有可以优化的可能了（目标函数中洗漱吧全是正的）。此时不确定的部分为0，确定的部分为<span class="arithmatex">\(-balance\)</span>，相加即为最小值</p>
-<h2 id="_6">检验数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_6">检验数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>$$
     c^T-(某些高斯消元)
 $$
