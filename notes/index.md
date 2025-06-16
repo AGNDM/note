@@ -1,6 +1,6 @@
 # 欢迎来到 AGNote
 
-这里是我的个人学习笔记与知识库，使用 Obsidian 记录，并通过 MkDocs + Material 自动发布。
+这里是个人学习笔记与知识库，使用 Obsidian 记录，并通过 MkDocs + Material 自动发布。
 
 ---
 
