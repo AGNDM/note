@@ -14,4 +14,5 @@
 
 ---
 
-> 希望这些笔记对您有所帮助！
+> Please [star](https://github.com/AGNDM/note) me if this helps!
+> [RRG Gaming](https://rrg.eastus.cloudapp.azure.com/) my e-sports club
