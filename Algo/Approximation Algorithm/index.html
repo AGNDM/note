@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://agndm.github.io/note/Algo/Approximate%20Algorithm/">
+        <link rel="canonical" href="https://agndm.github.io/note/Algo/Approximation%20Algorithm/">
       
       
         <link rel="prev" href="../">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Approximate Algorithm - AGNote</title>
+        <title>Approximation Algorithm - AGNote</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Approximate Algorithm
+              Approximation Algorithm
             
           </span>
         </div>
@@ -296,7 +296,7 @@
   
   
   <span class="md-ellipsis">
-    Approximate Algorithm
+    Approximation Algorithm
     
   </span>
   
@@ -690,7 +690,7 @@
 
 
 
-  <h1>Approximate Algorithm</h1>
+  <h1>Approximation Algorithm</h1>
 
 <p>![[approx_lec.pdf]]</p>
 <ul>
@@ -750,9 +750,7 @@
 <li>
 <p>Set Cover</p>
 <ul>
-<li>
-<p><strong>Def</strong> Set <span class="arithmatex">\(X\)</span> and subsets <span class="arithmatex">\(S_i\)</span> , Minimizing # of subsets while covering the set <span class="arithmatex">\(X\)</span> </p>
-</li>
+<li><strong>Def</strong> Set <span class="arithmatex">\(X\)</span> and subsets <span class="arithmatex">\(S_i\)</span> , Minimizing # of subsets while covering the set <span class="arithmatex">\(X\)</span> </li>
 <li>
 <p>Greedy: Always select the <strong>largest</strong> subset</p>
 <ul>
@@ -775,33 +773,30 @@
 <p>When <span class="arithmatex">\(X_k\; = \; 0\)</span> we're done</p>
 </li>
 <li>
-<p>So inductively we have,$$</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>\forall k,\quad |X_k|\le(1-\frac{1}{t})^kn \le\,\ldots some\; math\ldots\le e^{-\frac{k}{n}}n 
+<p>So inductively we have,
+$$
+        \forall k,\quad |X_k|\le(1-\frac{1}{t})^kn \le\,\ldots some\; math\ldots\le e^{-\frac{k}{n}}n 
 $$</p>
-<ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>
 <p>Partition</p>
 <ul>
-<li>
-<p>Partition <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span></p>
-</li>
-<li>
-<p>Goal: maintain the balance as much as possible</p>
-</li>
+<li>Partition <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span></li>
+<li>Goal: maintain the balance as much as possible</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 2L=sum\;of\;all\;the\;weights
-$$
-- optimal solution<span class="arithmatex">\(\ge L\)</span></p>
+\]</div>
 <ul>
+<li>
+<p>optimal solution<span class="arithmatex">\(\ge L\)</span></p>
+</li>
 <li>
 <p>Do a brute-force in the range of <span class="arithmatex">\(m\)</span> </p>
 </li>

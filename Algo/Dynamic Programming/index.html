@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://agndm.github.io/note/Algo/Dynamic%20Programming/">
       
       
-        <link rel="prev" href="../Approximate%20Algorithm/">
+        <link rel="prev" href="../Approximation%20Algorithm/">
       
       
         <link rel="next" href="../Review/">
@@ -289,12 +289,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Approximate%20Algorithm/" class="md-nav__link">
+      <a href="../Approximation%20Algorithm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Approximate Algorithm
+    Approximation Algorithm
     
   </span>
   
@@ -896,9 +896,8 @@ f(t)=
 0,\quad &amp;if\; t=s \\
 \infty,\quad&amp;if\,indegree(t)=0 \\
 \min_{e=(a,t)} 
-\begin{cases}
-weight(a,t)+f(a)\},
-\end{cases}&amp;otherwise
+\{weight(a,t)+f(a)\},
+&amp;otherwise
 \end{cases}
 \]</div>
 <ol>
@@ -911,9 +910,8 @@ f(t)=
 \infty,\quad&amp;if\,indegree(t)=0 \\
 Memo[t], &amp;if\,in\,memo \\
 \min_{e=(a,t)} 
-\begin{cases}
-weight(a,t)+f(a)\},
-\end{cases}&amp;otherwise
+\{weight(a,t)+f(a)\},
+&amp;otherwise
 \end{cases}
 \]</div>
 <p>This is a Top-Bottom algorithm and  we <strong>cannot</strong> deal with negative edges. If we do this bottom-up we'll get Bellman-Ford algorithm which can deal with negative edges.</p>
