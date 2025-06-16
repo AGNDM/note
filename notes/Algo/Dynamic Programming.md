@@ -40,9 +40,8 @@ f(t)=
 0,\quad &if\; t=s \\
 \infty,\quad&if\,indegree(t)=0 \\
 \min_{e=(a,t)} 
-\begin{cases}
-weight(a,t)+f(a)\},
-\end{cases}&otherwise
+\{weight(a,t)+f(a)\},
+&otherwise
 \end{cases}
 $$
 
@@ -55,9 +54,8 @@ f(t)=
 \infty,\quad&if\,indegree(t)=0 \\
 Memo[t], &if\,in\,memo \\
 \min_{e=(a,t)} 
-\begin{cases}
-weight(a,t)+f(a)\},
-\end{cases}&otherwise
+\{weight(a,t)+f(a)\},
+&otherwise
 \end{cases}
 $$
 

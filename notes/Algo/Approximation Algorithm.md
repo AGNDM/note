@@ -30,11 +30,8 @@
 			-  So $C <= 2C_{opt}$ 
 			
 - Set Cover
-
-	- **Def** Set $X$ and subsets $S_i$ , Minimizing # of subsets while covering the set $X$ 
-	
+	-  **Def** Set $X$ and subsets $S_i$ , Minimizing # of subsets while covering the set $X$ 
 	- Greedy: Always select the **largest** subset
-	
 		- a $(\ln{(n)} + 1)$-approx algo (whats the bound?)
 		
 		- Assume $|C_{opt}| \; = \; t$  $X_k\;=\;elements \;in\; iteration\; k$ . So for any $k$ we can cover it using $t$ sets. 
@@ -47,19 +44,19 @@
 			
 			- When $X_k\; = \; 0$ we're done
 			
-			- So inductively we have,$$
-			
-\forall k,\quad |X_k|\le(1-\frac{1}{t})^kn \le\,\ldots some\; math\ldots\le e^{-\frac{k}{n}}n 
-$$
+			- So inductively we have,
+		    $$
+        \forall k,\quad |X_k|\le(1-\frac{1}{t})^kn \le\,\ldots some\; math\ldots\le e^{-\frac{k}{n}}n 
+            $$
 
 - Partition
-	- Partition $A$ and $B$
-	
+	-  Partition $A$ and $B$
 	- Goal: maintain the balance as much as possible
 	
-	 $$
-2L=sum\;of\;all\;the\;weights
-$$
+	$$
+	2L=sum\;of\;all\;the\;weights
+    $$
+	
 	- optimal solution$\ge L$
 	
 	- Do a brute-force in the range of $m$ 

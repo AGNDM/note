@@ -6,7 +6,7 @@
 - NP P relation 
 - 概念
 - 证明
-## Approximate Algorithm
+## [Approximation Algorithm](Approximation%20Algorithm.md)
 - 概念
 - 给到一个近似算法，是不是足够好
 ## Greedy
