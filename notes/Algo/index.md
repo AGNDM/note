@@ -1,1 +1,1 @@
-[Approximate Algo](Approximate%algo)
+[Approximate Algo](Approximate%20algo.md)
