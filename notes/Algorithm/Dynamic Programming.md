@@ -1,4 +1,4 @@
-## How to find a DP algorithm
+## How to form a DP algorithm
 1. Describe $f(x)$ in words
 2. Find base cases and recursions and form this,
 
