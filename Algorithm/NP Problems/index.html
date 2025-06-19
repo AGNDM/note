@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://agndm.github.io/note/Algo/Dynamic%20Programming/">
+        <link rel="canonical" href="https://agndm.github.io/note/Algorithm/NP%20Problems/">
       
       
-        <link rel="prev" href="../Approximation%20Algorithm/">
+        <link rel="prev" href="../MaxFlow/">
       
       
         <link rel="next" href="../Review/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Dynamic Programming - AGNote</title>
+        <title>NP Problems - AGNote</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-find-a-dp-algorithm" class="md-skip">
+        <a href="#interactability" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dynamic Programming
+              NP Problems
             
           </span>
         </div>
@@ -244,7 +244,7 @@
   
   
   <span class="md-ellipsis">
-    Algo
+    Algorithm
     
   </span>
   
@@ -255,7 +255,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Algo
+            Algorithm
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -309,6 +309,75 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dynamic%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynamic Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MaxFlow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MaxFlow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -324,7 +393,7 @@
   
   
   <span class="md-ellipsis">
-    Dynamic Programming
+    NP Problems
     
   </span>
   
@@ -337,7 +406,7 @@
   
   
   <span class="md-ellipsis">
-    Dynamic Programming
+    NP Problems
     
   </span>
   
@@ -358,37 +427,109 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-find-a-dp-algorithm" class="md-nav__link">
+  <a href="#interactability" class="md-nav__link">
     <span class="md-ellipsis">
-      How to find a DP algorithm
+      Interactability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shortest-path-example" class="md-nav__link">
+  <a href="#np-complete-and-np-hard" class="md-nav__link">
     <span class="md-ellipsis">
-      Shortest Path Example
+      NP-complete and NP-hard
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Shortest Path Example">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-np-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical NP Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typical NP Problems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-to-bottom-up" class="md-nav__link">
+  <a href="#independent-set" class="md-nav__link">
     <span class="md-ellipsis">
-      How to bottom-up?
+      Independent Set
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#detect-negative-cycles" class="md-nav__link">
+  <a href="#vertex-cover" class="md-nav__link">
     <span class="md-ellipsis">
-      Detect Negative Cycles
+      Vertex Cover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Cover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sat" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3sat" class="md-nav__link">
+    <span class="md-ellipsis">
+      3SAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamiltonian-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hamiltonian Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dierected-hamiltonian-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dierected Hamiltonian Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TSP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Matching
     </span>
   </a>
   
@@ -400,18 +541,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#weighted-interval-scheduling" class="md-nav__link">
+  <a href="#np-completeness" class="md-nav__link">
     <span class="md-ellipsis">
-      Weighted Interval Scheduling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#knapsack-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Knapsack Problem
+      NP-completeness
     </span>
   </a>
   
@@ -778,37 +910,109 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-find-a-dp-algorithm" class="md-nav__link">
+  <a href="#interactability" class="md-nav__link">
     <span class="md-ellipsis">
-      How to find a DP algorithm
+      Interactability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shortest-path-example" class="md-nav__link">
+  <a href="#np-complete-and-np-hard" class="md-nav__link">
     <span class="md-ellipsis">
-      Shortest Path Example
+      NP-complete and NP-hard
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Shortest Path Example">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-np-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical NP Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typical NP Problems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-to-bottom-up" class="md-nav__link">
+  <a href="#independent-set" class="md-nav__link">
     <span class="md-ellipsis">
-      How to bottom-up?
+      Independent Set
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#detect-negative-cycles" class="md-nav__link">
+  <a href="#vertex-cover" class="md-nav__link">
     <span class="md-ellipsis">
-      Detect Negative Cycles
+      Vertex Cover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Cover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sat" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3sat" class="md-nav__link">
+    <span class="md-ellipsis">
+      3SAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamiltonian-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hamiltonian Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dierected-hamiltonian-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dierected Hamiltonian Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TSP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Matching
     </span>
   </a>
   
@@ -820,18 +1024,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#weighted-interval-scheduling" class="md-nav__link">
+  <a href="#np-completeness" class="md-nav__link">
     <span class="md-ellipsis">
-      Weighted Interval Scheduling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#knapsack-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Knapsack Problem
+      NP-completeness
     </span>
   </a>
   
@@ -853,128 +1048,60 @@
 
 
 
-  <h1>Dynamic Programming</h1>
+  <h1>NP Problems</h1>
 
-<h2 id="how-to-find-a-dp-algorithm">How to find a DP algorithm<a class="headerlink" href="#how-to-find-a-dp-algorithm" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Describe <span class="arithmatex">\(f(x)\)</span> in words</li>
-<li>Find base cases and recursions and form this,</li>
-</ol>
+<h2 id="interactability">Interactability<a class="headerlink" href="#interactability" title="Permanent link">&para;</a></h2>
+<p>We define binary relation  <span class="arithmatex">\(R \subseteq \{0,1\}^* \times \{0,1\}^*\)</span> and two functions decide(R) and search(R).</p>
 <div class="arithmatex">\[
-f(x) =
-\begin{cases}
-\text{base case}\quad x=\text{some special numbers} \\
-\text{something contains $f(m)$ where }m&lt;x
-\end{cases}
+    R:x\to \omega
 \]</div>
-<ol>
-<li>Memorization: Add a lookup table to recursive code so that future calls to <span class="arithmatex">\(f\)</span> with the same arguments can return immediately
-So the final product is like,</li>
-</ol>
 <div class="arithmatex">\[
-f(x) =
-\begin{cases}
-\text{base case}\quad &amp;x=\text{some special numbers} \\
-Memo[x]\text{ in the memo}\quad &amp;\text{if it is computed before}\\
-\text{something contains $f(m)$ where }m&lt;x &amp;\text{compute through recurtion}
-\end{cases}
+    decide(R,x):=\text{decide if }\exists\text{ witness }\omega\text{ s.t. }(x,\omega)\in R
 \]</div>
-<h2 id="shortest-path-example">Shortest Path Example<a class="headerlink" href="#shortest-path-example" title="Permanent link">&para;</a></h2>
-<p>We'll apply this principle to the shortest path problem</p>
-<ol>
-<li><span class="arithmatex">\(f(t)\)</span> by word</li>
-</ol>
 <div class="arithmatex">\[
-    f(t) = \text{the shortest path from s to t}
+    search(R,x):=\text{find a witness }\omega\text{ s.t. }(x,\omega)\in R
 \]</div>
-<ol>
-<li><span class="arithmatex">\(f(t)\)</span> with base case and recursion</li>
-</ol>
+<p>The diffrence is that output of decide func is yes/no while output of search func is <span class="arithmatex">\(\omega\)</span></p>
+<p>We are going to focus on decide func</p>
+<p><span class="arithmatex">\(x\)</span> here is an instance, a given background, i.e. the graph <span class="arithmatex">\((G,s,t)\)</span> in a Max Flow problem.
+<span class="arithmatex">\(\omega\)</span> is a witness/certificate or typically speaking, a general unknown part, i.e. the <span class="arithmatex">\((s,t)\)</span> flow.
+<span class="arithmatex">\(R\)</span> represents how we define a problem, i.e. <span class="arithmatex">\((x,\omega)\in R\)</span> iff <span class="arithmatex">\(\omega\)</span> is a Max Flow.
+Decide func can return whether there exists a Max Flow. </p>
+<p>Verifier <span class="arithmatex">\(V(x,\omega)\)</span> tells us whether <span class="arithmatex">\((x,\omega)\in R\)</span>
+From which we can find out that decide func can be solved by simply verifying every possible <span class="arithmatex">\(\omega\)</span> in exponential time.</p>
+<p><span class="arithmatex">\(x\)</span> here is an instance, i.e. the graph <span class="arithmatex">\((G,s,t)\)</span> in a Max Flow problem, <span class="arithmatex">\(\omega\)</span> is a witness/certificate, i.e. the <span class="arithmatex">\((s,t)\)</span> flow. <span class="arithmatex">\((x,\omega)\in R\)</span> iff <span class="arithmatex">\(\omega\)</span> is a Max Flow. Decide func can return whether there exists a Max Flow. </p>
+<p>If there is a poly-time algorithm for verifier <span class="arithmatex">\(V\)</span>, we say it's a <strong>NP problem</strong>.</p>
+<p>Furthermore, if a poly-time algorithm for decide function also exists, it's a <strong>P problem</strong>.</p>
+<h2 id="np-complete-and-np-hard">NP-complete and NP-hard<a class="headerlink" href="#np-complete-and-np-hard" title="Permanent link">&para;</a></h2>
+<p>Simply understanding, a problem <span class="arithmatex">\(A\)</span> is NP-hard if <span class="arithmatex">\(A\)</span> is not easier than any other NP problems. <span class="arithmatex">\(A\)</span> is NP-complete if <span class="arithmatex">\(A\)</span> is in NP and is NP-hard.</p>
+<h2 id="typical-np-problems">Typical NP Problems<a class="headerlink" href="#typical-np-problems" title="Permanent link">&para;</a></h2>
+<h3 id="independent-set">Independent Set<a class="headerlink" href="#independent-set" title="Permanent link">&para;</a></h3>
+<h3 id="vertex-cover">Vertex Cover<a class="headerlink" href="#vertex-cover" title="Permanent link">&para;</a></h3>
+<h3 id="set-cover">Set Cover<a class="headerlink" href="#set-cover" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
-f(t)=
-\begin{cases}
-0,\quad &amp;if\; t=s \\
-\infty,\quad&amp;if\,indegree(t)=0 \\
-\min_{e=(a,t)} 
-\{weight(a,t)+f(a)\},
-&amp;otherwise
-\end{cases}
+    S_{i}\subseteq U
 \]</div>
-<ol>
-<li>Memorization: if <span class="arithmatex">\(f(t)\)</span> is called, save it to <span class="arithmatex">\(Memo[t]\)</span></li>
-</ol>
+<p>Is there a collection of <span class="arithmatex">\(\leq k\)</span> of there sets <span class="arithmatex">\(S_i\)</span> such that their union is <span class="arithmatex">\(U\)</span>?</p>
+<h3 id="sat">SAT<a class="headerlink" href="#sat" title="Permanent link">&para;</a></h3>
+<p>Given a CNF formula <span class="arithmatex">\(\Phi\)</span>, is there a satisfying assignment?</p>
+<h3 id="3sat">3SAT<a class="headerlink" href="#3sat" title="Permanent link">&para;</a></h3>
+<p>Given a 3-CNF formula <span class="arithmatex">\(\Phi\)</span>, is there a satisfying assignment?</p>
+<h3 id="hamiltonian-cycle">Hamiltonian Cycle<a class="headerlink" href="#hamiltonian-cycle" title="Permanent link">&para;</a></h3>
+<p>Does there exixst a simple cycle <span class="arithmatex">\(C\)</span> in an undirected graph <span class="arithmatex">\(G=(V,E)\)</span>?</p>
+<h3 id="dierected-hamiltonian-cycle">Dierected Hamiltonian Cycle<a class="headerlink" href="#dierected-hamiltonian-cycle" title="Permanent link">&para;</a></h3>
+<p>Does there exixst a simple cycle <span class="arithmatex">\(C\)</span> in a directed graph <span class="arithmatex">\(G=(V,E)\)</span>?</p>
+<p>Use magical way to reduce it from SAT</p>
+<h3 id="tsp">TSP<a class="headerlink" href="#tsp" title="Permanent link">&para;</a></h3>
+<p>Travel to all vertices within distance of <span class="arithmatex">\(d\)</span></p>
+<h3 id="3d-matching">3D Matching<a class="headerlink" href="#3d-matching" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
-f(t)=
-\begin{cases}
-0,\quad &amp;if\; t=s \\
-\infty,\quad&amp;if\,indegree(t)=0 \\
-Memo[t], &amp;if\,in\,memo \\
-\min_{e=(a,t)} 
-\{weight(a,t)+f(a)\},
-&amp;otherwise
-\end{cases}
+\begin{aligned}
+    T\subseteq X\times Y\times Z\\
+    \exists\;elements \in X \cup Y\cup Z \text{ in T}
+\end{aligned}
 \]</div>
-<p>This is a Top-Bottom algorithm and  we <strong>cannot</strong> deal with negative edges. If we do this bottom-up we'll get Bellman-Ford algorithm which can deal with negative edges.</p>
-<h3 id="how-to-bottom-up">How to bottom-up?<a class="headerlink" href="#how-to-bottom-up" title="Permanent link">&para;</a></h3>
-<p>The essence of bottom-up lies in the way of memorization. In the top-down algo, we memorize in recursions. However, in bottom-up algo, we memorize first. In other words, the depth of recursion stack is at most 1.</p>
-<p>It's simple to get a bottom-up version. To <strong>bottom</strong>-up, we should start from s instead of t. For every edges going out from s (or <span class="arithmatex">\(e\in \mathbb{E}\)</span> if there's negative edges), we apply <span class="arithmatex">\(f(t)\)</span> to them.</p>
-<h3 id="detect-negative-cycles">Detect Negative Cycles<a class="headerlink" href="#detect-negative-cycles" title="Permanent link">&para;</a></h3>
-<p>If negative cycles is reachable from <span class="arithmatex">\(s\)</span>, we use Bellman-Ford.</p>
-<p>If not (which means it's not a DAG), we create a virtual sink <span class="arithmatex">\(s_v\)</span> and <span class="arithmatex">\(\forall v\in \mathbb{V}\)</span>, we form an edge <span class="arithmatex">\((s_{k},v)\)</span> with weight of 0. We turn it into a DAG without creating new possible negative cycles.</p>
-<h2 id="weighted-interval-scheduling">Weighted Interval Scheduling<a class="headerlink" href="#weighted-interval-scheduling" title="Permanent link">&para;</a></h2>
-<p>![[Pasted image 20250617001849.png]]</p>
-<ul>
-<li>
-<p>Job <span class="arithmatex">\(j_{1},j_{2},\dots j_{n}\)</span> where <span class="arithmatex">\(finish(j_{1})\leq finishj_{2}\leq\dots\leq finish(j_{n})\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(p(j_i)=j_{k}\)</span> if <span class="arithmatex">\(j_k\)</span> </p>
-<ul>
-<li>is the largest index of job which is incompatible with <span class="arithmatex">\(j_i\)</span></li>
-<li><span class="arithmatex">\(&lt;j_{i}\)</span></li>
-</ul>
-</li>
-<li>Word def</li>
-</ul>
-<div class="arithmatex">\[
-\begin{align}
-    f(x)=&amp;\text{the maximum total weight of a set of mutually compatible jobs that can be selected from the first j jobs}\\
-    &amp;\text{i.e., from the subset of jobs \{1, 2, ..., j\}}
-\end{align}
-\]</div>
-<ol>
-<li>Recursion def</li>
-</ol>
-<div class="arithmatex">\[
-f(j)=
-\begin{cases}
-0,\quad &amp;if\;j=0 \\
-\max(f(j-1), f(p(j)))&amp;otherwise
-\end{cases}
-\]</div>
-<ol>
-<li>Memorization</li>
-</ol>
-<div class="arithmatex">\[
-f(j)=
-\begin{cases}
-0,\quad &amp;if\;j=0 \\
-Memo[j]&amp;if\;in\;memo \\
-\max(f(j-1), f(p(j)))&amp;otherwise
-\end{cases}
-\]</div>
-<ol>
-<li>Bottom up: compute <span class="arithmatex">\(Memo[1],Memo[2],\dots,Memo[n]\)</span> one after another by transforming the formula in 3.</li>
-</ol>
-<h2 id="knapsack-problem">Knapsack Problem<a class="headerlink" href="#knapsack-problem" title="Permanent link">&para;</a></h2>
-<div class="arithmatex">\[
-OPT(i,w)=
-\begin{cases}
-0,\quad &amp; i=0 \\
-OPT(i-1,w) &amp; w_{i}&gt;w \\
-\max\{OPT(i-1,w), OPT(i-1,w-w_{i})\}&amp;otherwise
-\end{cases}
-\]</div>
+<h2 id="np-completeness">NP-completeness<a class="headerlink" href="#np-completeness" title="Permanent link">&para;</a></h2>
+<p>SAT is the <strong>source</strong> of all NP-complete problems (maybe?).</p>
 
 
 

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://agndm.github.io/note/Algo/Approximation%20Algorithm/">
+        <link rel="canonical" href="https://agndm.github.io/note/Algorithm/MaxFlow/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../Graph/">
       
       
-        <link rel="next" href="../Dynamic%20Programming/">
+        <link rel="next" href="../NP%20Problems/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Approximation Algorithm - AGNote</title>
+        <title>MaxFlow - AGNote</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#f-f-algorithm" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Approximation Algorithm
+              MaxFlow
             
           </span>
         </div>
@@ -239,7 +244,7 @@
   
   
   <span class="md-ellipsis">
-    Algo
+    Algorithm
     
   </span>
   
@@ -250,7 +255,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Algo
+            Algorithm
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -281,17 +286,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Approximation%20Algorithm/" class="md-nav__link">
         
   
   
@@ -302,7 +300,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -321,6 +318,137 @@
   
   <span class="md-ellipsis">
     Dynamic Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    MaxFlow
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    MaxFlow
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#f-f-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      F-F Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="F-F Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#residual-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Residual Path
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NP%20Problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NP Problems
     
   </span>
   
@@ -676,6 +804,38 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#f-f-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      F-F Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="F-F Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#residual-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Residual Path
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -690,125 +850,10 @@
 
 
 
-  <h1>Approximation Algorithm</h1>
+  <h1>MaxFlow</h1>
 
-<p>![[approx_lec.pdf]]</p>
-<ul>
-<li>
-<p><strong>Scheme</strong> and <strong>Algorithm</strong></p>
-<ul>
-<li>
-<p><span class="arithmatex">\(n\)</span> is the scale of input</p>
-</li>
-<li>
-<p>the cost <span class="arithmatex">\(C\)</span> we mentioned in the note in fact is more  similar to the meaning of <strong>value</strong> in <strong>maximization problems</strong></p>
-</li>
-<li>
-<p>So when considering maximization, we want the value <span class="arithmatex">\(C\)</span> to be as much as possible. In other words, we should minimize <span class="arithmatex">\(\frac {C_{opt}} C\)</span>.</p>
-</li>
-<li>
-<p>Conversely, in minimization problems, we focus on <span class="arithmatex">\(\frac{C}{C_{opt}}\)</span>.</p>
-</li>
-<li>
-<p>Furthermore, we can play around <span class="arithmatex">\(\omega(n)\)</span> using <span class="arithmatex">\(\epsilon\)</span>. This becomes a <strong>scheme</strong> because the <span class="arithmatex">\(\epsilon\)</span> is an arbitrary number.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>PTAS</strong> vs <strong>FPTAS</strong>(poly in both n and <span class="arithmatex">\(\frac{1}{\epsilon}\)</span>)</p>
-</li>
-<li>
-<p>Vertex Cover</p>
-<ul>
-<li>
-<p>Greedy: choose the one with the ==possible maximum== degree(good in practice bad in theory)</p>
-</li>
-<li>
-<p>Random: Simply taking random edges(u, v) and pick vertices u &amp; v</p>
-<ul>
-<li>
-<p>2-approx algo:</p>
-<ul>
-<li>
-<p><span class="arithmatex">\(A\)</span> = edges that are picked</p>
-</li>
-<li>
-<p><span class="arithmatex">\(C\)</span> = <span class="arithmatex">\(2|A|\)</span> vertices are picked (that's where '2' comes from)</p>
-</li>
-<li>
-<p>No two edges in <span class="arithmatex">\(A\)</span> share the same point and we have to cover every edges (at least half of the vertices) in <span class="arithmatex">\(A\)</span> so  <span class="arithmatex">\(C_{opt} &gt;= |A|\)</span> </p>
-</li>
-<li>
-<p>So <span class="arithmatex">\(C &lt;= 2C_{opt}\)</span> </p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Set Cover</p>
-<ul>
-<li><strong>Def</strong> Set <span class="arithmatex">\(X\)</span> and subsets <span class="arithmatex">\(S_i\)</span> , Minimizing # of subsets while covering the set <span class="arithmatex">\(X\)</span> </li>
-<li>
-<p>Greedy: Always select the <strong>largest</strong> subset</p>
-<ul>
-<li>
-<p>a <span class="arithmatex">\((\ln{(n)} + 1)\)</span>-approx algo (whats the bound?)</p>
-</li>
-<li>
-<p>Assume <span class="arithmatex">\(|C_{opt}| \; = \; t\)</span>  <span class="arithmatex">\(X_k\;=\;elements \;in\; iteration\; k\)</span> . So for any <span class="arithmatex">\(k\)</span> we can cover it using <span class="arithmatex">\(t\)</span> sets. </p>
-<ul>
-<li>
-<p>One of them at least cover <span class="arithmatex">\(\frac{|X_k|}{t}\)</span> elements</p>
-</li>
-<li>
-<p>So the one we pick should be greater than <span class="arithmatex">\(\frac{|X_k|}{t}\)</span></p>
-</li>
-<li>
-<p>So we have <span class="arithmatex">\(<span class="arithmatex">\(\forall k,\quad |X_{k+1}| \le (1-\frac{1}{t})|X_k|\)</span>\)</span></p>
-</li>
-<li>
-<p>When <span class="arithmatex">\(X_k\; = \; 0\)</span> we're done</p>
-</li>
-<li>
-<p>So inductively we have,
-$$
-        \forall k,\quad |X_k|\le(1-\frac{1}{t})^kn \le\,\ldots some\; math\ldots\le e^{-\frac{k}{n}}n 
-$$</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Partition</p>
-<ul>
-<li>Partition <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span></li>
-<li>Goal: maintain the balance as much as possible</li>
-</ul>
-<div class="arithmatex">\[
-2L=sum\;of\;all\;the\;weights
-\]</div>
-<ul>
-<li>
-<p>optimal solution<span class="arithmatex">\(\ge L\)</span></p>
-</li>
-<li>
-<p>Do a brute-force in the range of <span class="arithmatex">\(m\)</span> </p>
-</li>
-<li>
-<p>Do the rest in an easier way</p>
-</li>
-<li>
-<p>In this case the cost <span class="arithmatex">\(C\)</span> should be <span class="arithmatex">\(\omega(A)\)</span> (or <span class="arithmatex">\(\omega(B)\)</span>) and the <span class="arithmatex">\(C_{opt}\)</span> is L. Thus, the ratio <span class="arithmatex">\(\rho(n)\)</span> is the upper bound on <span class="arithmatex">\(\frac{\omega(A)}{L}\)</span>.</p>
-</li>
-</ul>
-</li>
-</ul>
+<h2 id="f-f-algorithm">F-F Algorithm<a class="headerlink" href="#f-f-algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="residual-path">Residual Path<a class="headerlink" href="#residual-path" title="Permanent link">&para;</a></h3>
 
 
 
