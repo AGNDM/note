@@ -28,8 +28,8 @@ $$
 5. 由3和4，我们有$\frac{{\frac{S_{A}}{r-1}}}{\frac{S_{E}}{n-r}}\sim F(r-1,n-r)$这是我们拒绝域的来源
 
 ### ANOVA表
-Source | Sum of squares | Degree of freedom | Mean squares | F | p-value | F crit
--- | -- |--|--|--|--|--|
-Between group|$S_A$|$r-1$|$MS_A=\frac{S_{A}}{r-1}$|$\frac{MS_{A}}{MS_{E}}$|$P\{F(r-1,n-r)\geq f_{0}\}$|$F_{\alpha}(r-1,n-1)$
-Within group|$S_E$|$n-r$|$MS_{E}=\frac{S_{E}}{n-r}$|
-Total|$S_{T}$|$n-1$
+| Source        | Sum of squares | Degree of freedom | Mean squares               | F                       | p-value                     | F crit                |     |
+| ------------- | -------------- | ----------------- | -------------------------- | ----------------------- | --------------------------- | --------------------- | --- |
+| Between group | $S_A$          | $r-1$             | $MS_A=\frac{S_{A}}{r-1}$   | $\frac{MS_{A}}{MS_{E}}$ | $P\{F(r-1,n-r)\geq f_{0}\}$ | $F_{\alpha}(r-1,n-1)$ |     |
+| Within group  | $S_E$          | $n-r$             | $MS_{E}=\frac{S_{E}}{n-r}$ |                         |                             |                       |     |
+| Total         | $S_{T}$        | $n-1$             |                            |                         |                             |                       |     |
