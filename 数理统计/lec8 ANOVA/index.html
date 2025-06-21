@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://agndm.github.io/note/Algorithm/MaxFlow/">
+        <link rel="canonical" href="https://agndm.github.io/note/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec8%20ANOVA/">
       
       
-        <link rel="prev" href="../Graph/">
+        <link rel="prev" href="../lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/">
       
       
-        <link rel="next" href="../NP%20Problems/">
+        <link rel="next" href="../lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>MaxFlow - AGNote</title>
+        <title>lec8 ANOVA - AGNote</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#f-f-algorithm" class="md-skip">
+        <a href="#anova" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MaxFlow
+              lec8 ANOVA
             
           </span>
         </div>
@@ -223,20 +223,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -252,7 +250,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algorithm
@@ -266,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../Algorithm/" class="md-nav__link">
         
   
   
@@ -289,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Approximation%20Algorithm/" class="md-nav__link">
+      <a href="../../Algorithm/Approximation%20Algorithm/" class="md-nav__link">
         
   
   
@@ -312,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Dynamic%20Programming/" class="md-nav__link">
+      <a href="../../Algorithm/Dynamic%20Programming/" class="md-nav__link">
         
   
   
@@ -335,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Graph/" class="md-nav__link">
+      <a href="../../Algorithm/Graph/" class="md-nav__link">
         
   
   
@@ -355,30 +353,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    MaxFlow
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algorithm/MaxFlow/" class="md-nav__link">
         
   
   
@@ -389,48 +367,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#f-f-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      F-F Algorithm
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="F-F Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#residual-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Residual Path
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -443,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NP%20Problems/" class="md-nav__link">
+      <a href="../../Algorithm/NP%20Problems/" class="md-nav__link">
         
   
   
@@ -466,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Review/" class="md-nav__link">
+      <a href="../../Algorithm/Review/" class="md-nav__link">
         
   
   
@@ -699,18 +635,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -726,7 +664,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             数理统计
@@ -740,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -763,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+      <a href="../lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/" class="md-nav__link">
         
   
   
@@ -786,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec12%20%E5%85%85%E5%88%86%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+      <a href="../lec12%20%E5%85%85%E5%88%86%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
         
   
   
@@ -809,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/" class="md-nav__link">
+      <a href="../lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/" class="md-nav__link">
         
   
   
@@ -832,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec14%20%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E3%80%81%E6%9C%80%E5%B0%8F%E5%85%85%E5%88%86%E6%80%A7%E5%92%8C%E4%BB%8E%E5%B1%9E%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+      <a href="../lec14%20%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E3%80%81%E6%9C%80%E5%B0%8F%E5%85%85%E5%88%86%E6%80%A7%E5%92%8C%E4%BB%8E%E5%B1%9E%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
         
   
   
@@ -855,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+      <a href="../lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="md-nav__link">
         
   
   
@@ -875,10 +813,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec8%20ANOVA/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    lec8 ANOVA
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -889,6 +847,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANOVA 单因素方差分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANOVA 单因素方差分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anova_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANOVA表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -901,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/" class="md-nav__link">
+      <a href="../lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/" class="md-nav__link">
         
   
   
@@ -1040,19 +1049,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#f-f-algorithm" class="md-nav__link">
+  <a href="#anova" class="md-nav__link">
     <span class="md-ellipsis">
-      F-F Algorithm
+      ANOVA 单因素方差分析
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="F-F Algorithm">
+    <nav class="md-nav" aria-label="ANOVA 单因素方差分析">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#residual-path" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Residual Path
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anova_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANOVA表
     </span>
   </a>
   
@@ -1079,10 +1097,38 @@
 
 
 
-  <h1>MaxFlow</h1>
+  <h1>lec8 ANOVA</h1>
 
-<h2 id="f-f-algorithm">F-F Algorithm<a class="headerlink" href="#f-f-algorithm" title="Permanent link">&para;</a></h2>
-<h3 id="residual-path">Residual Path<a class="headerlink" href="#residual-path" title="Permanent link">&para;</a></h3>
+<h2 id="anova">ANOVA 单因素方差分析<a class="headerlink" href="#anova" title="Permanent link">&para;</a></h2>
+<h3 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>推断两个或两个以上总体均值是否有差异的检验方法，我们主要讨论但因素（factor，对实验指标产生影响的原因）的情况</p>
+<p>考虑假设检验：
+$$
+    H_{0}:\mu_{1}=\mu_{2}=\dots=\mu_{n}\quad vs\quad H_{1}: \mu\text{不全相等}
+$$</p>
+<p>我们有很多个总体<span class="arithmatex">\(X_{1},X_{2},\dots,X_{r}\)</span>，对于某一个总体<span class="arithmatex">\(X_i\)</span>中有样本<span class="arithmatex">\(X_{i1},X_{i2},\dots,X_{in_{i}}\)</span></p>
+<div class="arithmatex">\[
+{\begin{align}
+所有总体的样本数量之和n &amp; =\sum_{i=1}^rn_{i} \\
+第i个总体的样本均值\bar{X}_{i} &amp; =\frac{1}{n_{i}}X_{ij} \\
+所有总体的样本的均值\bar{X} &amp; =\frac{1}{n}\sum_{i=1}^r\sum_{j=1}^{n_{i}}X_{ij} \\
+\text{total sum of squares }S_{T} &amp; =\sum_{i=1}^r\sum_{j=1}^{n_{i}}(X_{ij}-\bar{X})^2 \\
+\text{sum of squares between groups }S_{A} &amp; =\sum _{i=1}^rn_{i}(\bar{X}_{i}-\bar{X})^2  \\
+\text{sum of squares within group }S_{E} &amp; =\sum_{i=1}^r\sum_{j=1}^{n_{i}}(X_{ij}-\bar{X}_{i})^2
+\end{align}}
+\]</div>
+<p>需要注意的点：
+1. 前三个是我们对数据的预处理，我们采取三种方法看待后面的三个统计量，第一种是把所有总体的样本抽出来看作同一个大整体的统计量<span class="arithmatex">\(X_{big}\)</span>，而<span class="arithmatex">\(S_T\)</span>就是这个<span class="arithmatex">\(X_{big}\)</span>的方差。第二种是把每一个总体转化成一个（方差，样本量）的新样本，放到一个新的总体里，然后用样本量为权求方差的加权方差。最后一个是各个总体的方差之和。
+2. <span class="arithmatex">\(S_{T}=S_{A}+S_{E}\)</span>
+3. <span class="arithmatex">\(\frac{S_{E}}{\sigma^2}\sim \chi^2(n-r)\)</span>由学生定理
+4. <span class="arithmatex">\(H_{0}\)</span>下，<span class="arithmatex">\(\frac{S_{A}}{\sigma^2}\sim \chi^2(r-1)\)</span>
+5. 由3和4，我们有<span class="arithmatex">\(\frac{{\frac{S_{A}}{r-1}}}{\frac{S_{E}}{n-r}}\sim F(r-1,n-r)\)</span>这是我们拒绝域的来源</p>
+<h3 id="anova_1">ANOVA表<a class="headerlink" href="#anova_1" title="Permanent link">&para;</a></h3>
+<p>Source | Sum of squares | Degree of freedom | Mean squares | F | p-value | F crit
+-- | -- |--|--|--|--|--|
+Between group|<span class="arithmatex">\(S_A\)</span>|<span class="arithmatex">\(r-1\)</span>|<span class="arithmatex">\(MS_A=\frac{S_{A}}{r-1}\)</span>|<span class="arithmatex">\(\frac{MS_{A}}{MS_{E}}\)</span>|<span class="arithmatex">\(P\{F(r-1,n-r)\geq f_{0}\}\)</span>|<span class="arithmatex">\(F_{\alpha}(r-1,n-1)\)</span>
+Within group|<span class="arithmatex">\(S_E\)</span>|<span class="arithmatex">\(n-r\)</span>|<span class="arithmatex">\(MS_{E}=\frac{S_{E}}{n-r}\)</span>|
+Total|<span class="arithmatex">\(S_{T}\)</span>|<span class="arithmatex">\(n-1\)</span></p>
 
 
 

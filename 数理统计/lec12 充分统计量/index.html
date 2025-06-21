@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://agndm.github.io/note/Algorithm/MaxFlow/">
+        <link rel="canonical" href="https://agndm.github.io/note/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec12%20%E5%85%85%E5%88%86%E7%BB%9F%E8%AE%A1%E9%87%8F/">
       
       
-        <link rel="prev" href="../Graph/">
+        <link rel="prev" href="../lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/">
       
       
-        <link rel="next" href="../NP%20Problems/">
+        <link rel="next" href="../lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>MaxFlow - AGNote</title>
+        <title>Lec12 充分统计量 - AGNote</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#f-f-algorithm" class="md-skip">
+        <a href="#mvue" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MaxFlow
+              Lec12 充分统计量
             
           </span>
         </div>
@@ -223,20 +223,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -252,7 +250,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algorithm
@@ -266,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../Algorithm/" class="md-nav__link">
         
   
   
@@ -289,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Approximation%20Algorithm/" class="md-nav__link">
+      <a href="../../Algorithm/Approximation%20Algorithm/" class="md-nav__link">
         
   
   
@@ -312,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Dynamic%20Programming/" class="md-nav__link">
+      <a href="../../Algorithm/Dynamic%20Programming/" class="md-nav__link">
         
   
   
@@ -335,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Graph/" class="md-nav__link">
+      <a href="../../Algorithm/Graph/" class="md-nav__link">
         
   
   
@@ -355,30 +353,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    MaxFlow
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algorithm/MaxFlow/" class="md-nav__link">
         
   
   
@@ -389,48 +367,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#f-f-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      F-F Algorithm
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="F-F Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#residual-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Residual Path
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -443,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NP%20Problems/" class="md-nav__link">
+      <a href="../../Algorithm/NP%20Problems/" class="md-nav__link">
         
   
   
@@ -466,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Review/" class="md-nav__link">
+      <a href="../../Algorithm/Review/" class="md-nav__link">
         
   
   
@@ -699,18 +635,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -726,7 +664,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             数理统计
@@ -740,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -763,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+      <a href="../lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/" class="md-nav__link">
         
   
   
@@ -783,10 +721,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec12%20%E5%85%85%E5%88%86%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lec12 充分统计量
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -797,6 +755,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小无偏方差估计量MVUE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      充分统计量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="充分统计量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neyman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neyman分解定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rao-blackwellmvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用Rao-Blackwell来求MVUE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -809,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/" class="md-nav__link">
+      <a href="../lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/" class="md-nav__link">
         
   
   
@@ -832,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec14%20%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E3%80%81%E6%9C%80%E5%B0%8F%E5%85%85%E5%88%86%E6%80%A7%E5%92%8C%E4%BB%8E%E5%B1%9E%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+      <a href="../lec14%20%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E3%80%81%E6%9C%80%E5%B0%8F%E5%85%85%E5%88%86%E6%80%A7%E5%92%8C%E4%BB%8E%E5%B1%9E%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
         
   
   
@@ -855,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+      <a href="../lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="md-nav__link">
         
   
   
@@ -878,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec8%20ANOVA/" class="md-nav__link">
+      <a href="../lec8%20ANOVA/" class="md-nav__link">
         
   
   
@@ -901,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/" class="md-nav__link">
+      <a href="../lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/" class="md-nav__link">
         
   
   
@@ -1040,19 +1058,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#f-f-algorithm" class="md-nav__link">
+  <a href="#mvue" class="md-nav__link">
     <span class="md-ellipsis">
-      F-F Algorithm
+      最小无偏方差估计量MVUE
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="F-F Algorithm">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      充分统计量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="充分统计量">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#residual-path" class="md-nav__link">
+  <a href="#neyman" class="md-nav__link">
     <span class="md-ellipsis">
-      Residual Path
+      Neyman分解定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rao-blackwellmvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用Rao-Blackwell来求MVUE
     </span>
   </a>
   
@@ -1079,10 +1115,25 @@
 
 
 
-  <h1>MaxFlow</h1>
+  <h1>Lec12 充分统计量</h1>
 
-<h2 id="f-f-algorithm">F-F Algorithm<a class="headerlink" href="#f-f-algorithm" title="Permanent link">&para;</a></h2>
-<h3 id="residual-path">Residual Path<a class="headerlink" href="#residual-path" title="Permanent link">&para;</a></h3>
+<h2 id="mvue">最小无偏方差估计量MVUE<a class="headerlink" href="#mvue" title="Permanent link">&para;</a></h2>
+<h2 id="_1">充分统计量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="neyman">Neyman分解定理<a class="headerlink" href="#neyman" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+f(x_{1};\theta)\dots f(x_{n};\theta)=k_{1}\{\mu_{1}(x_{1},\dots,x_{n});\theta\}\cdot k_{2}(x_{1},\dots,x_{n})
+\]</div>
+<p>那么我们就有充分统计量</p>
+<div class="arithmatex">\[
+    Y_{1}=u_{1}(X_{1},\dots,X_{n})
+\]</div>
+<h3 id="rao-blackwellmvue">利用Rao-Blackwell来求MVUE<a class="headerlink" href="#rao-blackwellmvue" title="Permanent link">&para;</a></h3>
+<p>我们有充分统计量<span class="arithmatex">\(Y_1\)</span>和无偏估计量<span class="arithmatex">\(Y_2\)</span>，然后我们来求</p>
+<div class="arithmatex">\[
+    \phi(y_{1})=E(Y_{2}|Y_{1}=y_{1})
+\]</div>
+<p>这个<span class="arithmatex">\(\phi\)</span>的方差更小且无偏，如果达到了RCB那肯定就是MVUE</p>
+<p>一般来说我们可以把这个条件期望转化为一个条件概率，比如说一个构造的Bernulli分布的概率，或者是抓住其中一个样本来构造一个只关于这个样本的无偏估计</p>
 
 
 

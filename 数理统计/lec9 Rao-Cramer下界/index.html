@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://agndm.github.io/note/Algorithm/MaxFlow/">
+        <link rel="canonical" href="https://agndm.github.io/note/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/">
       
       
-        <link rel="prev" href="../Graph/">
+        <link rel="prev" href="../lec8%20ANOVA/">
       
       
-        <link rel="next" href="../NP%20Problems/">
+        <link rel="next" href="../../%E6%97%A5%E6%9C%AC%E8%AA%9E/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>MaxFlow - AGNote</title>
+        <title>lec9 Rao Cramer下界 - AGNote</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#f-f-algorithm" class="md-skip">
+        <a href="#fisher" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MaxFlow
+              lec9 Rao Cramer下界
             
           </span>
         </div>
@@ -223,20 +223,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -252,7 +250,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Algorithm
@@ -266,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../Algorithm/" class="md-nav__link">
         
   
   
@@ -289,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Approximation%20Algorithm/" class="md-nav__link">
+      <a href="../../Algorithm/Approximation%20Algorithm/" class="md-nav__link">
         
   
   
@@ -312,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Dynamic%20Programming/" class="md-nav__link">
+      <a href="../../Algorithm/Dynamic%20Programming/" class="md-nav__link">
         
   
   
@@ -335,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Graph/" class="md-nav__link">
+      <a href="../../Algorithm/Graph/" class="md-nav__link">
         
   
   
@@ -355,30 +353,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    MaxFlow
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Algorithm/MaxFlow/" class="md-nav__link">
         
   
   
@@ -389,48 +367,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#f-f-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      F-F Algorithm
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="F-F Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#residual-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Residual Path
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -443,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NP%20Problems/" class="md-nav__link">
+      <a href="../../Algorithm/NP%20Problems/" class="md-nav__link">
         
   
   
@@ -466,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Review/" class="md-nav__link">
+      <a href="../../Algorithm/Review/" class="md-nav__link">
         
   
   
@@ -699,18 +635,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -726,7 +664,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             数理统计
@@ -740,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -763,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+      <a href="../lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/" class="md-nav__link">
         
   
   
@@ -786,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec12%20%E5%85%85%E5%88%86%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+      <a href="../lec12%20%E5%85%85%E5%88%86%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
         
   
   
@@ -809,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/" class="md-nav__link">
+      <a href="../lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/" class="md-nav__link">
         
   
   
@@ -832,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec14%20%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E3%80%81%E6%9C%80%E5%B0%8F%E5%85%85%E5%88%86%E6%80%A7%E5%92%8C%E4%BB%8E%E5%B1%9E%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+      <a href="../lec14%20%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E3%80%81%E6%9C%80%E5%B0%8F%E5%85%85%E5%88%86%E6%80%A7%E5%92%8C%E4%BB%8E%E5%B1%9E%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
         
   
   
@@ -855,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+      <a href="../lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="md-nav__link">
         
   
   
@@ -878,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec8%20ANOVA/" class="md-nav__link">
+      <a href="../lec8%20ANOVA/" class="md-nav__link">
         
   
   
@@ -898,10 +836,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    lec9 Rao Cramer下界
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -912,6 +870,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fisher 信息量
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rao-cramer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rao-Cramer下界
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rao-Cramer下界">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      RCB
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1040,19 +1049,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#f-f-algorithm" class="md-nav__link">
+  <a href="#fisher" class="md-nav__link">
     <span class="md-ellipsis">
-      F-F Algorithm
+      Fisher 信息量
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="F-F Algorithm">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rao-cramer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rao-Cramer下界
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rao-Cramer下界">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#residual-path" class="md-nav__link">
+  <a href="#rcb" class="md-nav__link">
     <span class="md-ellipsis">
-      Residual Path
+      RCB
     </span>
   </a>
   
@@ -1079,10 +1097,41 @@
 
 
 
-  <h1>MaxFlow</h1>
+  <h1>lec9 Rao Cramer下界</h1>
 
-<h2 id="f-f-algorithm">F-F Algorithm<a class="headerlink" href="#f-f-algorithm" title="Permanent link">&para;</a></h2>
-<h3 id="residual-path">Residual Path<a class="headerlink" href="#residual-path" title="Permanent link">&para;</a></h3>
+<h2 id="fisher">Fisher 信息量<a class="headerlink" href="#fisher" title="Permanent link">&para;</a></h2>
+<p>首先对总体<span class="arithmatex">\(X\)</span>有对数极大似然估计函数</p>
+<div class="arithmatex">\[
+    \log f(X;\theta)
+\]</div>
+<p>然后我们定义Fisher信息量</p>
+<div class="arithmatex">\[
+    I(\theta)=E\left[ \left\{ \frac{{\partial \log f(X;\theta)}}{\partial \theta} \right\}^2 \right]
+\]</div>
+<p>接着如果满足了一些可导性方面的要求，我们还有</p>
+<div class="arithmatex">\[
+{\begin{align}
+I(\theta) &amp; =Var\left[ \frac{{\partial\log f(X;\theta)}}{\partial \theta} \right] \\
+I(\theta) &amp; =-E\left[ \frac{{\partial^2\log f(X;\theta)}}{\partial \theta^2} \right]
+\end{align}}
+\]</div>
+<p>可以看出，Fisher信息量和我们的对数极大似然函数十分相关</p>
+<p>并且我们同时定义score function</p>
+<div class="arithmatex">\[
+     \frac{{\partial \log f(X;\theta)}}{\partial \theta} 
+\]</div>
+<h2 id="rao-cramer">Rao-Cramer下界<a class="headerlink" href="#rao-cramer" title="Permanent link">&para;</a></h2>
+<p>我们在估计参数<span class="arithmatex">\(\theta\)</span>的时候会想要我们的估计量<span class="arithmatex">\(Y=u(X_{1},X_{2},\dots,X_{n})\)</span>的方差尽可能小，而Rao-Cramer下界就告诉我们了最小可能是多少（不一定真正能达到）。同时，我们令<span class="arithmatex">\(E[Y]=k(\theta)\)</span></p>
+<p>有了Fisher信息量，我们定义Rao-Cramer下界</p>
+<div class="arithmatex">\[
+    Var(Y)\geq \frac{[k'(\theta)]}{nI(\theta)}
+\]</div>
+<p>当<span class="arithmatex">\(k(\theta)=\theta\)</span>，即我们的估计量<span class="arithmatex">\(Y\)</span>是无偏的时候，我们的下界就是</p>
+<div class="arithmatex">\[
+    Var(Y)\geq \frac{1}{nI(\theta)}
+\]</div>
+<h3 id="rcb">RCB<a class="headerlink" href="#rcb" title="Permanent link">&para;</a></h3>
+<p>如果估计量<span class="arithmatex">\(Y\)</span>是无偏的，并且其方差达到了RC下界，则称它为RCB</p>
 
 
 
