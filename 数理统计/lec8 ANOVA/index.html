@@ -1124,11 +1124,52 @@ $$</p>
 4. <span class="arithmatex">\(H_{0}\)</span>下，<span class="arithmatex">\(\frac{S_{A}}{\sigma^2}\sim \chi^2(r-1)\)</span>
 5. 由3和4，我们有<span class="arithmatex">\(\frac{{\frac{S_{A}}{r-1}}}{\frac{S_{E}}{n-r}}\sim F(r-1,n-r)\)</span>这是我们拒绝域的来源</p>
 <h3 id="anova_1">ANOVA表<a class="headerlink" href="#anova_1" title="Permanent link">&para;</a></h3>
-<p>Source | Sum of squares | Degree of freedom | Mean squares | F | p-value | F crit
--- | -- |--|--|--|--|--|
-Between group|<span class="arithmatex">\(S_A\)</span>|<span class="arithmatex">\(r-1\)</span>|<span class="arithmatex">\(MS_A=\frac{S_{A}}{r-1}\)</span>|<span class="arithmatex">\(\frac{MS_{A}}{MS_{E}}\)</span>|<span class="arithmatex">\(P\{F(r-1,n-r)\geq f_{0}\}\)</span>|<span class="arithmatex">\(F_{\alpha}(r-1,n-1)\)</span>
-Within group|<span class="arithmatex">\(S_E\)</span>|<span class="arithmatex">\(n-r\)</span>|<span class="arithmatex">\(MS_{E}=\frac{S_{E}}{n-r}\)</span>|
-Total|<span class="arithmatex">\(S_{T}\)</span>|<span class="arithmatex">\(n-1\)</span></p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Sum of squares</th>
+<th>Degree of freedom</th>
+<th>Mean squares</th>
+<th>F</th>
+<th>p-value</th>
+<th>F crit</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Between group</td>
+<td><span class="arithmatex">\(S_A\)</span></td>
+<td><span class="arithmatex">\(r-1\)</span></td>
+<td><span class="arithmatex">\(MS_A=\frac{S_{A}}{r-1}\)</span></td>
+<td><span class="arithmatex">\(\frac{MS_{A}}{MS_{E}}\)</span></td>
+<td><span class="arithmatex">\(P\{F(r-1,n-r)\geq f_{0}\}\)</span></td>
+<td><span class="arithmatex">\(F_{\alpha}(r-1,n-1)\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Within group</td>
+<td><span class="arithmatex">\(S_E\)</span></td>
+<td><span class="arithmatex">\(n-r\)</span></td>
+<td><span class="arithmatex">\(MS_{E}=\frac{S_{E}}{n-r}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td><span class="arithmatex">\(S_{T}\)</span></td>
+<td><span class="arithmatex">\(n-1\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
