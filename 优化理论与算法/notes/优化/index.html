@@ -1,0 +1,1449 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://agndm.github.io/note/%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/%E4%BC%98%E5%8C%96/">
+      
+      
+        <link rel="prev" href="../Matrix%20Calculus/">
+      
+      
+        <link rel="next" href="../%E5%86%85%E7%82%B9%E6%B3%95/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>优化 - AGNote</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AGNote" class="md-header__button md-logo" aria-label="AGNote" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AGNote
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              优化
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AGNote" class="md-nav__button md-logo" aria-label="AGNote" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AGNote
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    欢迎来到 AGNote
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/Approximation%20Algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Approximation Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/Dynamic%20Programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynamic Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/Graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/MaxFlow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MaxFlow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/NP%20Problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NP Problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Algorithm/Review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    优化理论与算法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            优化理论与算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LP%E5%AF%B9%E5%81%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LP对偶
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linear%20Programming%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Programming 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linear%20Programming%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Programming 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linear%20Programming%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Programming 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Matrix%20Calculus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matrix Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    优化
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%86%85%E7%82%B9%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    内点法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%87%B8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    凸
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数理统计
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            数理统计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec10%20%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec10 极大似然检验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec12%20%E5%85%85%E5%88%86%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec12 充分统计量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec13%20%E5%AE%8C%E5%A4%87%E6%80%A7%E3%80%81%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83%E7%B1%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec13 完备性、指数分布类
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec14%20%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E3%80%81%E6%9C%80%E5%B0%8F%E5%85%85%E5%88%86%E6%80%A7%E5%92%8C%E4%BB%8E%E5%B1%9E%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec14 参数的函数、最小充分性和从属统计量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec15%20%E6%9C%80%E4%BC%98%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec15 最优假设检验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec8%20ANOVA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lec8 ANOVA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/lec9%20Rao-Cramer%E4%B8%8B%E7%95%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lec9 Rao Cramer下界
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    日本語
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            日本語
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%97%A5%E6%9C%AC%E8%AA%9E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%97%A5%E6%9C%AC%E8%AA%9E/%E6%97%A5%E8%AF%AD%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一课
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>优化</h1>
+
+<p>凸函数 (Convex Function)
+定义
+函数 <span class="arithmatex">\(f\)</span> 是凸函数当且仅当：
+1.<span class="arithmatex">\(dom(f)\)</span> 是一个凸集。
+2.对任意 <span class="arithmatex">\(x_1, x_2 \in dom(f)\)</span> 且 <span class="arithmatex">\(\theta \in\)</span>，有：<span class="arithmatex">\(f(\theta x_1 + (1−\theta)x_2) \leq \theta f(x_1) + (1−\theta)f(x_2)\)</span>。
+凸函数： 仿射函数 (<span class="arithmatex">\(ax + b\)</span>)、指数函数 (<span class="arithmatex">\(e^{ax}\)</span>)、幂函数 (<span class="arithmatex">\(x^p\)</span>，当 <span class="arithmatex">\(p \geq 1\)</span> 或 <span class="arithmatex">\(p \leq 0\)</span>)、绝对值幂函数 (<span class="arithmatex">\(|x|^p\)</span>，当 <span class="arithmatex">\(p \geq 1\)</span>)、负熵函数 (<span class="arithmatex">\(x \ln x\)</span>)。
+仿射函数既是凸的也是凹的。
+范数是凸函数，如一般的 <span class="arithmatex">\(l_p\)</span> 范数和谱范数。
+验证函数的凸性方法
+一阶条件 (First-Order Condition)：可微函数 <span class="arithmatex">\(f\)</span> 是凸的，当且仅当它的定义域是凸的，且满足 <span class="arithmatex">\(f(x) + \nabla f(x)^\top (y - x) \leq f(y)\)</span> 对所有 <span class="arithmatex">\(x, y \in dom(f)\)</span>。
+二阶条件 (Second-Order Condition)：对于定义域为凸集的二阶可微函数 <span class="arithmatex">\(f\)</span>，有 <span class="arithmatex">\(f\)</span> 是凸函数当且仅当 <span class="arithmatex">\(\nabla^2 f(x) \succeq 0\)</span> 对所有 <span class="arithmatex">\(x \in dom(f)\)</span>。若 <span class="arithmatex">\(\nabla^2 f(x) \succ 0\)</span>，则 <span class="arithmatex">\(f\)</span> 是严格凸函数。
+例子：二次函数 <span class="arithmatex">\(f(x) = \frac{1}{2}x^\top Px + q^\top x + r\)</span> 当 <span class="arithmatex">\(P \succeq 0\)</span> 时是凸的。最小二乘目标函数 <span class="arithmatex">\(f(x) = |Ax - b|_2\)</span> 对任意 <span class="arithmatex">\(A\)</span> 都是凸的。
+归约为标量函数 (Reduction to a Scalar Function)：函数 <span class="arithmatex">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> 是凸函数，当且仅当 <span class="arithmatex">\(dom(f)\)</span> 是凸集，且函数 <span class="arithmatex">\(g(t) = f(x + tv)\)</span> 对任意 <span class="arithmatex">\(x \in dom(f), v \in \mathbb{R}^n\)</span> 是关于 <span class="arithmatex">\(t\)</span> 的凸函数。
+上图函数法 (Epigraph)：函数 <span class="arithmatex">\(f\)</span> 是凸的，当且仅当其上图集 <span class="arithmatex">\(epi f = {(x, t) \in \mathbb{R}^{n+1} \mid x \in dom(f), f(x) \leq t}\)</span> 是凸集。
+保持凸性的运算 (Operations Preserving Convexity)
+正数缩放 (Positive Scaling)：若 <span class="arithmatex">\(f\)</span> 是凸函数，<span class="arithmatex">\(\lambda \geq 0\)</span>，则 <span class="arithmatex">\(\lambda f\)</span> 是凸函数。
+求和 (Sum)：对于凸函数 <span class="arithmatex">\(f_1\)</span> 和 <span class="arithmatex">\(f_2\)</span>，它们的和 <span class="arithmatex">\(f_1 + f_2\)</span> 是凸的。
+与仿射函数的复合 (Composition with Affine Function)：若 <span class="arithmatex">\(f\)</span> 是凸函数，则 <span class="arithmatex">\(f(Ax + b)\)</span> 是凸函数。
+逐点最大值 (Pointwise Maximum)：若 <span class="arithmatex">\(f_1, \dots, f_m\)</span> 是凸函数，则 <span class="arithmatex">\(f(x) = \max{f_1(x), \dots, f_m(x)}\)</span> 是凸函数。
+逐点上确界 (Pointwise Supremum)：若 <span class="arithmatex">\(f(x, y)\)</span> 对于每个 <span class="arithmatex">\(y \in A\)</span> 是关于 <span class="arithmatex">\(x\)</span> 的凸函数，则 <span class="arithmatex">\(g(x) = \sup_{y \in A} f(x, y)\)</span> 是凸函数。
+与标量函数的复合 (Composition with Scalar Functions)：设 <span class="arithmatex">\(g: \mathbb{R}^n \to \mathbb{R}\)</span>, <span class="arithmatex">\(h: \mathbb{R} \to \mathbb{R}\)</span>，定义复合函数 <span class="arithmatex">\(f(x) = h(g(x))\)</span>。则 <span class="arithmatex">\(f\)</span> 是凸函数，当满足以下条件之一：
+<span class="arithmatex">\(g\)</span> 是凸函数，<span class="arithmatex">\(h\)</span> 是非减且凸函数。
+<span class="arithmatex">\(g\)</span> 是凹函数，<span class="arithmatex">\(h\)</span> 是非增且凸函数。
+与向量函数的复合 (Composition with Vector Functions)：设 <span class="arithmatex">\(g: \mathbb{R}^n \to \mathbb{R}^k\)</span>, <span class="arithmatex">\(h: \mathbb{R}^k \to \mathbb{R}\)</span>，定义复合函数 <span class="arithmatex">\(f(x) = h(g_1(x), \dots, g_k(x))\)</span>。则 <span class="arithmatex">\(f\)</span> 是凸函数，当满足以下条件之一：
+<span class="arithmatex">\(g_i\)</span> 是凸函数，<span class="arithmatex">\(h\)</span> 在每个变量上都是凸且非减的。
+<span class="arithmatex">\(g_i\)</span> 是凹函数，<span class="arithmatex">\(h\)</span> 在每个变量上都是凸且非增的。
+最小化 (Minimization)：若 <span class="arithmatex">\(f(x, y)\)</span> 关于 <span class="arithmatex">\((x, y)\)</span> 是凸函数，且 <span class="arithmatex">\(C\)</span> 是一个凸集合，则 <span class="arithmatex">\(g(x) = \inf_{y \in C} f(x, y)\)</span> 是关于 <span class="arithmatex">\(x\)</span> 的凸函数。
+拟凸性 (Quasi-Convexity)
+函数 <span class="arithmatex">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> 是拟凸函数，当且仅当 <span class="arithmatex">\(dom(f)\)</span> 是凸集，且其下水平集 <span class="arithmatex">\(S_\alpha = {x \in dom(f) \mid f(x) \leq \alpha}\)</span> 对所有 <span class="arithmatex">\(\alpha\)</span> 都是凸集。
+另一种定义：当 <span class="arithmatex">\(dom(f)\)</span> 是凸的，且对于任意 <span class="arithmatex">\(x, y \in dom(f)\)</span> 与 <span class="arithmatex">\(\theta \in\)</span>，有 <span class="arithmatex">\(f(\theta x + (1−\theta)y) \leq \max{f(x), f(y)}\)</span>。
+共轭函数 (The Conjugate Function)
+函数 <span class="arithmatex">\(f\)</span> 的共轭函数 <span class="arithmatex">\(f^\ast(y) = \sup_{x \in dom(f)} (y^\top x - f(x))\)</span>。
+<span class="arithmatex">\(f^\ast\)</span> 总是凸函数（即使 <span class="arithmatex">\(f\)</span> 不是凸的）。
+Fenchel 不等式 (Fenchel's Inequality)：<span class="arithmatex">\(f(x) + f^\ast(y) \geq y^\top x\)</span>, <span class="arithmatex">\(\forall x, y\)</span>。
+如果 <span class="arithmatex">\(f\)</span> 是凸函数且其上图集是闭集，则 <span class="arithmatex">\(f^{\ast\ast} = f\)</span>。
+凸集合 (Convex Set)
+定义
+一个集合中任意两点之间的线段也包含在该集合中：<span class="arithmatex">\(\forall x_1, x_2 \in C, 0 \leq \theta \leq 1 \Rightarrow \theta x_1 + (1-\theta)x_2 \in C\)</span>。
+超平面与半空间 (Hyperplanes and Halfspaces)
+超平面 (Hyperplane)：<span class="arithmatex">\({x \in \mathbb{R}^n : a^\top x = b}\)</span> (<span class="arithmatex">\(a \ne 0\)</span>)。
+半空间 (Halfspace)：<span class="arithmatex">\({x \in \mathbb{R}^n : a^\top x \leq b}\)</span> (<span class="arithmatex">\(a \ne 0\)</span>)。
+多面体 (Polyhedra)：<span class="arithmatex">\({x \in \mathbb{R}^n : Ax \leq b}\)</span>。
+欧几里得球与椭球体 (Euclidean Balls and Ellipsoids)
+范数球与范数锥 (Norm Balls and Norm Cones)
+范数锥 (Norm Cone)：<span class="arithmatex">\({(x, t) : |x| \leq t}\)</span>。
+欧几里得范数锥也被称为二阶锥 (Second-Order Cone)。
+凸组合与凸包 (Convex Combination and Convex Hull)
+凸组合 (Convex combination)：<span class="arithmatex">\(x = \theta_1 x_1 + \dots + \theta_k x_k\)</span> 满足 <span class="arithmatex">\(\theta_1 + \dots + \theta_k = 1, \theta_i \geq 0\)</span>。
+凸包 (Convex hull) <span class="arithmatex">\(conv(S)\)</span>：集合 <span class="arithmatex">\(S\)</span> 中所有点的凸组合构成的集合。
+线性子空间一定是凸锥；凸锥一定是凸集。
+保持凸性的运算 (Operations Preserving Convexity)
+交集 (Intersection)：<span class="arithmatex">\(C_1 \cap C_2\)</span>。
+和 (Sum)：<span class="arithmatex">\(C_1 + C_2\)</span> (Minkowski 和)。
+平移 (Translated set)：<span class="arithmatex">\(C + a\)</span>。
+缩放 (Scaled set)：<span class="arithmatex">\(tC\)</span>。
+笛卡尔积 (Cartesian product)：<span class="arithmatex">\(C_1 \times C_2\)</span>。
+分离超平面定理 (Separating Hyperplane Theorem)
+如果 <span class="arithmatex">\(C\)</span> 和 <span class="arithmatex">\(D\)</span> 是非空不相交的凸集，则存在 <span class="arithmatex">\(a \ne 0, b\)</span> 使得 <span class="arithmatex">\(a^\top x \leq b\)</span> 对所有 <span class="arithmatex">\(x \in C\)</span> 且 <span class="arithmatex">\(a^\top x \geq b\)</span> 对所有 <span class="arithmatex">\(x \in D\)</span>。
+支撑超平面定理 (Supporting Hyperplane Theorem)
+如果 <span class="arithmatex">\(C\)</span> 是凸集，则在 <span class="arithmatex">\(C\)</span> 的每一个边界点都存在一个支撑超平面。
+凸优化问题 (Convex Optimization Problem)
+优化问题的标准形式
+<span class="arithmatex">\(\min f_0(x)\)</span> s.t. <span class="arithmatex">\(f_i(x) \leq 0, i = 1, \dots, m\)</span>; <span class="arithmatex">\(h_i(x) = 0, i = 1, \dots, p\)</span>。
+可行解 (Feasible solution)：<span class="arithmatex">\(x \in dom(f_0)\)</span> 且满足约束。
+最优解 (Optimal solution)：可行解 <span class="arithmatex">\(x\)</span> 满足 <span class="arithmatex">\(f_0(x) = p^\star\)</span> (最优值)。
+局部最优解 (Local optimal solution)：在某个半径 <span class="arithmatex">\(R &gt; 0\)</span> 范围内为最优解。
+凸优化问题
+定义：标准形式中，目标函数 <span class="arithmatex">\(f_0\)</span> 和不等式约束函数 <span class="arithmatex">\(f_1, \dots, f_m\)</span> 都是凸函数，等式约束是仿射的 (<span class="arithmatex">\(Ax=b\)</span>)。
+重要性质：凸优化问题的可行解集是凸集。
+局部最优与全局最优：任意凸优化问题的局部最优点也是全局最优点。
+可微函数的最优性判据
+无约束问题 <span class="arithmatex">\(\min f_0(x)\)</span>：最优的充要条件为 <span class="arithmatex">\(\nabla f_0(x) = 0\)</span>。
+等式约束问题 <span class="arithmatex">\(\min f_0(x)\)</span> s.t. <span class="arithmatex">\(Ax=b\)</span>：最优性充要条件为存在 <span class="arithmatex">\(\nu\)</span> 使得 <span class="arithmatex">\(x \in dom(f_0), Ax=b, \nabla f_0(x) + A^\top \nu = 0\)</span>。
+非负正交域上的最优化 <span class="arithmatex">\(\min f_0(x)\)</span> s.t. <span class="arithmatex">\(x \geq 0\)</span>：最优性充要条件为 <span class="arithmatex">\(x \in dom(f_0), x \succeq 0\)</span>, 且 <span class="arithmatex">\(\nabla f_0(x)_i \geq 0\)</span> 若 <span class="arithmatex">\(x_i = 0\)</span>，<span class="arithmatex">\(\nabla f_0(x)_i = 0\)</span> 若 <span class="arithmatex">\(x_i &gt; 0\)</span>。
+等价凸优化问题：可以通过消除/引入等式约束、引入松弛变量、改写成上图形式或对部分变量先进行最小化来重构等价凸问题。
+拟凸优化问题 (Quasiconvex Optimization)
+定义：目标函数 <span class="arithmatex">\(f_0\)</span> 是拟凸函数，<span class="arithmatex">\(f_1, \dots, f_m\)</span> 是凸函数，<span class="arithmatex">\(Ax=b\)</span> 是仿射约束。
+求解：通过凸可行性问题 + 二分法求解。
+凸问题常见形式
+线性规划 (Linear Program, LP)：目标函数和约束函数均为仿射函数。
+二次规划 (Quadratic Program, QP)：目标函数是凸二次函数，约束为仿射函数。要求二次项矩阵 <span class="arithmatex">\(P \in \mathbb{S}^n_+\)</span>。
+带二次约束的二次规划 (QCQP)：目标函数和约束均为凸二次函数。要求二次项矩阵 <span class="arithmatex">\(P_i \in \mathbb{S}^n_+\)</span>。
+二阶锥规划 (Second-order Cone Programming, SOCP)：包含二阶锥约束（范数约束），比 LP 和 QCQP 更一般。可用于建模鲁棒线性规划。
+半正定规划 (Semidefinite Program, SDP)：包含线性矩阵不等式约束。LP 和 SOCP 均可表达为 SDP。
+特征值最小化问题 (Eigenvalue Minimization)：<span class="arithmatex">\(\min \lambda_{max}(A(x))\)</span> 可等价转化为 SDP。
+对偶理论 (Duality Theory)
+拉格朗日函数 (Lagrangian Function)
+标准优化问题 <span class="arithmatex">\(\min f_0(x)\)</span> s.t. <span class="arithmatex">\(f_i(x) \leq 0, h_i(x) = 0\)</span> 的拉格朗日函数为 <span class="arithmatex">\(L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{i=1}^p \nu_i h_i(x)\)</span>。
+<span class="arithmatex">\(\lambda_i, \nu_i\)</span> 是拉格朗日乘子。
+拉格朗日对偶函数 (Lagrange Dual Function)
+<span class="arithmatex">\(g(\lambda, \nu) = \inf_{x \in D} L(x, \lambda, \nu)\)</span>。
+函数 <span class="arithmatex">\(g\)</span> 是凹函数。
+下界性质 (Lower bound property)：若 <span class="arithmatex">\(\lambda \geq 0\)</span>，则 <span class="arithmatex">\(g(\lambda, \nu) \leq p^\star\)</span> (原始问题最优值)。
+对偶问题 (Dual Problem)
+<span class="arithmatex">\(\max g(\lambda, \nu)\)</span> s.t. <span class="arithmatex">\(\lambda \geq 0\)</span>。
+对偶问题是凸问题，最优值用 <span class="arithmatex">\(d^\star\)</span> 表示，我们实际上是在最大化最小值。
+弱对偶 (Weak Duality)
+<span class="arithmatex">\(d^\star \leq p^\star\)</span>。
+总是成立（无论问题是凸的还是非凸的），可用于为困难问题提供下界。
+强对偶 (Strong Duality)
+<span class="arithmatex">\(d^\star = p^\star\)</span>。
+一般不成立，但对于凸优化问题通常成立。
+保证强对偶成立的条件被称为约束资格条件 (Constraint Qualifications)。
+Slater 约束资格条件 (Slater's Constraint Qualification)
+对于凸优化问题，如果存在一个严格可行的点 <span class="arithmatex">\(x \in int D\)</span> 使得 <span class="arithmatex">\(f_i(x) &lt; 0, \forall i\)</span> 且 <span class="arithmatex">\(Ax = b\)</span>，那么该问题强对偶成立。
+若 <span class="arithmatex">\(p^\star &gt; -\infty\)</span>，该条件也保证对偶最优解存在。
+互补松弛性 (Complementary Slackness)
+若强对偶成立，<span class="arithmatex">\(x^\star\)</span> 为原始问题最优解，<span class="arithmatex">\((\lambda^\star, \nu^\star)\)</span> 为对偶问题最优解，则对所有 <span class="arithmatex">\(i = 1, \dots, m\)</span>，有 <span class="arithmatex">\(\lambda^\star_i f_i(x^\star) = 0\)</span>。
+这意味着：若 <span class="arithmatex">\(\lambda^\star_i &gt; 0 \Rightarrow f_i(x^\star) = 0\)</span> (约束被激活)，若 <span class="arithmatex">\(f_i(x^\star) &lt; 0 \Rightarrow \lambda^\star_i = 0\)</span> (约束未激活)。
+Karush-Kuhn-Tucker (KKT) 条件
+对于可微优化问题，KKT 条件是以下四个条件的集合：
+1.原始约束 (Primal constraints)：<span class="arithmatex">\(f_i(x) \leq 0, h_i(x) = 0\)</span>。
+2.对偶可行性 (Dual constraints)：<span class="arithmatex">\(\lambda \geq 0\)</span>。
+3.互补松弛性 (Complementary slackness)：<span class="arithmatex">\(\lambda_i f_i(x) = 0\)</span>。
+4.拉格朗日函数关于 <span class="arithmatex">\(x\)</span> 的梯度为零 (Stationarity)：<span class="arithmatex">\(\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + \sum_{i=1}^p \nu_i \nabla h_i(x) = 0\)</span>。
+若强对偶成立且 <span class="arithmatex">\(x, \lambda, \nu\)</span> 为最优解，则它们必须满足 KKT 条件。
+对于凸优化问题，若 <span class="arithmatex">\(x, \lambda, \nu\)</span> 满足 KKT 条件，则它们是最优解。
+若满足 Slater 条件，则 <span class="arithmatex">\(x\)</span> 是最优的当且仅当存在 <span class="arithmatex">\(\lambda, \nu\)</span> 满足 KKT 条件。
+扰动与敏感性分析 (Perturbation and Sensitivity Analysis)
+若未扰动问题满足强对偶性，且 <span class="arithmatex">\(\lambda^\star, \nu^\star\)</span> 是其对偶最优解，则扰动问题的最优值 <span class="arithmatex">\(p^\star(u, v) \geq p^\star(0, 0) - u^\top \lambda^\star - v^\top \nu^\star\)</span>。
+局部敏感性 (Local Sensitivity)：如果 <span class="arithmatex">\(p^\star(u, v)\)</span> 在 <span class="arithmatex">\((0, 0)\)</span> 处可微，则 <span class="arithmatex">\(\lambda^\star_i = -\frac{\partial p^\star(0, 0)}{\partial u_i}\)</span>, <span class="arithmatex">\(\nu^\star_i = -\frac{\partial p^\star(0, 0)}{\partial v_i}\)</span>。拉格朗日乘子表示约束水平变化对最优值的影响率。
+迭代算法 (Iterative Algorithms)
+迭代方法：通过初始值生成一系列逐步改进的近似解的数学过程。
+三个关键要素：初始点 <span class="arithmatex">\(x_0\)</span>、更新策略 <span class="arithmatex">\(\Phi(\cdot)\)</span>、终止准则。
+终止准则
+梯度足够小：<span class="arithmatex">\(|\nabla f(x_k)| \leq \epsilon\)</span>。
+目标函数变化量足够小：<span class="arithmatex">\(|f(x_{k+1}) - f(x_k)| \leq \epsilon\)</span> 或相对变化量足够小。
+迭代点变化量足够小：<span class="arithmatex">\(|x_{k+1} - x_k| \leq \epsilon\)</span> 或相对变化量足够小。
+收敛速率 (Convergence Rates)
+Q-收敛定义：<span class="arithmatex">\(\lim_{k \to \infty} \frac{e_{k+1}}{e_k} = \mu\)</span>。
+次线性收敛：<span class="arithmatex">\(\mu = 1\)</span>。误差按 <span class="arithmatex">\(O(1/k)\)</span> 或 <span class="arithmatex">\(O(1/k^2)\)</span> 衰减。
+线性收敛：<span class="arithmatex">\(\mu \in (0, 1)\)</span>。误差按 <span class="arithmatex">\(O(\mu^k)\)</span> 衰减，达到精度 <span class="arithmatex">\(\epsilon\)</span> 需要 <span class="arithmatex">\(O(\log(1/\epsilon))\)</span> 次迭代。
+超线性收敛：<span class="arithmatex">\(\mu = 0\)</span>。
+二次收敛：<span class="arithmatex">\(\lim_{k \to \infty} \frac{e_{k+1}}{(e_k)^2} = \mu &gt; 0\)</span>。在实践中通常只需常数次迭代。
+R-收敛：若对任意 <span class="arithmatex">\(k\)</span> 有 <span class="arithmatex">\(|e_k| \leq \epsilon_k\)</span> 且 <span class="arithmatex">\({\epsilon_k}\)</span> Q-收敛于 0，则称 <span class="arithmatex">\({x_k}\)</span> 为 R-收敛。
+一阶方法 (First-Order Methods)
+梯度下降法 (Gradient Descent)
+算法：<span class="arithmatex">\(x_{k+1} = x_k - t_k \nabla f(x_k)\)</span>。
+<span class="arithmatex">\(-\nabla f(x_k)\)</span> 称为最速下降方向。
+步长选择规则：固定步长、精确线搜索、回溯线搜索 (Armijo 准则)。
+![[Pasted image 20250622215554.png]]
+回溯线搜索
+![[Pasted image 20250622231825.png]]
+L-光滑函数 (L-Smooth Function)
+定义：<span class="arithmatex">\(|\nabla f(x) - \nabla f(y)|_2 \leq L |x - y|_2\)</span>。等价于 <span class="arithmatex">\(f(y) \leq f(x) + \nabla f(x)^\top (y - x) + \frac{L}{2} |y - x|_2^2\)</span>。
+收敛性 (非凸)：找到 <span class="arithmatex">\(\epsilon\)</span>-稳定点 <span class="arithmatex">\((|\nabla f(x)| \leq \epsilon)\)</span> 需要 <span class="arithmatex">\(O(1/\epsilon^2)\)</span> 次迭代。
+凸且 L-光滑函数
+收敛性：找到 <span class="arithmatex">\(\epsilon\)</span>-次优解 <span class="arithmatex">\((|f(x_k) - f^\star| \leq \epsilon)\)</span> 需要 <span class="arithmatex">\(O(1/\epsilon)\)</span> 次迭代。
+<span class="arithmatex">\(\mu\)</span>-强凸且 L-光滑函数
+定义：<span class="arithmatex">\(f(x) - \frac{\mu}{2} x^\top x\)</span> 是凸函数。等价于 <span class="arithmatex">\(f(y) \geq f(x) + \nabla f(x)^\top (y - x) + \frac{\mu}{2} |x - y|_2^2\)</span>。
+收敛性：线性收敛，达到 <span class="arithmatex">\(\epsilon\)</span>-次优点需要 <span class="arithmatex">\(O(\log(1/\epsilon))\)</span> 次迭代。
+条件数 (Condition Number) <span class="arithmatex">\(L/\mu\)</span>：影响梯度下降速度的主要因素。当 <span class="arithmatex">\(L/\mu\)</span> 较大时，问题称为病态条件问题。
+次梯度下降法 (Subgradient Descent)
+次梯度 (Subgradient) <span class="arithmatex">\(g\)</span>：对于凸函数 <span class="arithmatex">\(f\)</span>，若 <span class="arithmatex">\(f(y) \geq f(x) + g^\top (y - x)\)</span> 对所有 <span class="arithmatex">\(y\)</span> 成立，则称 <span class="arithmatex">\(g\)</span> 是 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(x\)</span> 处的次梯度。
+次微分 (Subdifferential) <span class="arithmatex">\(\partial f(x)\)</span>：所有次梯度的集合。
+无约束问题最优性条件：<span class="arithmatex">\(x^\star\)</span> 是最优解当且仅当 <span class="arithmatex">\(0 \in \partial f(x^\star)\)</span>。
+算法：<span class="arithmatex">\(x_{k+1} = x_k - t_k g_k\)</span>，其中 <span class="arithmatex">\(g_k \in \partial f(x_k)\)</span>。
+步长选择：固定步长或递减步长。
+收敛性：
+固定步长：<span class="arithmatex">\(f_{best}^k - f^\star \leq \frac{R^2}{2kt} + \frac{G^2t}{2}\)</span>，取<span class="arithmatex">\(t=\frac{R}{g\sqrt{ K }}\)</span>收敛到 <span class="arithmatex">\(O(1/\sqrt{K})\)</span> 但不保证收敛到最优解。
+递减步长：若 <span class="arithmatex">\(t_k \to 0, \sum t_k = \infty\)</span>，则保证收敛到最优解。
+Polyak 步长 (<span class="arithmatex">\(t_k = \frac{f(x_k) - f^\star}{|g_k|_2^2}\)</span>，需要知道 <span class="arithmatex">\(f^\star\)</span>)：收敛到 <span class="arithmatex">\(O(GR/\sqrt{k})\)</span>。
+投影梯度法 (Projected Gradient Method)
+用于求解 <span class="arithmatex">\(\min_{x \in C} g(x)\)</span> (g 可微，C 凸集)。
+算法：<span class="arithmatex">\(x_{k+1} = P_C(x_k - t_k \nabla g(x_k))\)</span>。
+投影算子 (Projection Operator) <span class="arithmatex">\(P_C(x) = \arg \min_{u \in C} |x - u|_2\)</span>。
+收敛性：与梯度下降法相似。
+近端梯度法 (Proximal Gradient Method)
+用于求解 <span class="arithmatex">\(\min f(x) = g(x) + h(x)\)</span> (g 可微，h 凸但不可微)。
+算法：<span class="arithmatex">\(x_{k+1} = \arg \min_u \left( g(x_k) + \nabla g(x_k)^\top (u - x_k) + \frac{1}{2t_k} |u - x_k|_2^2 + h(u) \right)\)</span>。
+近端映射 (Proximal Mapping) <span class="arithmatex">\(prox_h(x) = \arg \min_u \left( \frac{1}{2} |x - u|_2^2 + h(u) \right)\)</span>。
+算法可表示为：<span class="arithmatex">\(x_{k+1} = prox_{t_k h} (x_k - t_k \nabla g(x_k))\)</span>。
+收敛性：
+凸函数：O(1/k)。
+强凸函数：线性收敛。
+优点：适用于可微与不可微凸函数之和的优化问题；收敛性质与标准梯度法相似；虽不如次梯度法通用，但收敛速度更快。
+![[Pasted image 20250622235224.png]]
+FISTA (Fast Iterative Shrinkage-Thresholding Algorithm)
+加速的近端梯度法，利用动量项。
+收敛性：O(1/k^2)。
+随机梯度下降法 (Stochastic Gradient Descent, SGD)
+用于最小化求和形式的目标函数 <span class="arithmatex">\(\min \frac{1}{n} \sum_{i=1}^n f_i(x)\)</span> 或期望形式 <span class="arithmatex">\(\min E_\omega f(x; \omega)\)</span>。
+算法：<span class="arithmatex">\(x_k = x_{k-1} - t_k \cdot \nabla f_{i_k}(x_{k-1})\)</span> (每次迭代随机选择一个索引 <span class="arithmatex">\(i_k\)</span>)。
+小批量 (Mini-batch) SGD：<span class="arithmatex">\(x_k = x_{k-1} - t_k \cdot \frac{1}{b} \sum_{i \in I_k} \nabla f_i(x_{k-1})\)</span> (随机选择一个大小为 <span class="arithmatex">\(b\)</span> 的子集 <span class="arithmatex">\(I_k\)</span>)。
+随机梯度估计是无偏的：<span class="arithmatex">\(E[\nabla f_{i_k}(x)] = \nabla f(x)\)</span>。
+收敛性：
+凸函数且 Lipschitz 梯度：期望收敛速率 <span class="arithmatex">\(E[f(x_k)] - f^\star = O(1/\sqrt{k})\)</span>。
+强凸函数：期望收敛速率 <span class="arithmatex">\(E[f(x_k)] - f^\star = O(1/k)\)</span> (不如全梯度下降的线性收敛)。
+方差缩减方法 (Variance Reduction Methods)：旨在降低随机梯度的方差。
+SAG (Stochastic Average Gradient)：维护梯度的平均值，使用有偏但方差缩减的估计量。
+收敛性：凸函数下 O(1/k)，强凸函数下线性收敛 O(<span class="arithmatex">\(\rho^k\)</span>)。
+SAGA：与 SAG 类似，但使用无偏方差缩减估计量。
+收敛性：匹配 SAG 的强凸线性收敛速率。
+自适应步长 (Adaptive Steplength)：如 AdaGrad、AdaDelta、RMSProp、Adam 等。
+二阶方法 (Second-Order Methods)
+牛顿法 (Newton's Method)
+牛顿步 (Newton Step) <span class="arithmatex">\(\Delta x_{nt} = -\nabla^2 f(x)^{-1} \nabla f(x)\)</span>。
+牛顿步最小化目标函数的二阶泰勒近似。
+算法：<span class="arithmatex">\(x^{k+1}=x+\Delta x_{nt}\)</span>
+局部收敛性：在接近最优解时表现优越，通常是超线性甚至二次收敛（如果 Hessian Lipschitz 连续）。
+阻尼牛顿法 (Damped Newton Method)：使用线搜索来确定步长，以保证全局收敛。
+牛顿递减量 (Newton Decrement) <span class="arithmatex">\(\lambda(x) = (\nabla f(x)^\top \nabla^2 f(x)^{-1} \nabla f(x))^{1/2}\)</span>：衡量 <span class="arithmatex">\(x\)</span> 与最优解接近程度的指标。
+经典收敛性分析：包含阻尼牛顿阶段（线性收敛）和二次收敛阶段（二次收敛）。
+仿射不变性 (Affine Invariance)：牛顿法对问题进行放缩（条件数）不敏感。
+自和谐 (Self-concordance)：一种特殊类别的凸函数，牛顿法对其具有更强的收敛性保证。
+信赖域方法 (Trust Region Methods)：另一种确定步长的方法，在局部二次模型上增加一个信任区域约束。
+优点：收敛速度快，不受条件数影响。缺点：每次迭代计算量大 (需要 Hessian 矩阵的逆或求解线性系统，通常是 <span class="arithmatex">\(O(n^3)\)</span>)。
+拟牛顿法 (Quasi-Newton Methods)
+动机：避免计算二阶导数和求解大型线性系统。
+算法：<span class="arithmatex">\(x_{k+1} = x_k - t H_k^{-1} \nabla f(x_k)\)</span>，其中 <span class="arithmatex">\(H_k\)</span> 是 Hessian 矩阵的近似。
+割线条件 (Secant Condition)：<span class="arithmatex">\(H_k (x_k - x_{k-1}) = \nabla f(x_k) - \nabla f(x_{k-1})\)</span>。
+BFGS 更新 (Broyden-Fletcher-Goldfarb-Shanno)：一种流行的拟牛顿更新公式，能够保持 <span class="arithmatex">\(H_k\)</span> 的正定性。
+![[Pasted image 20250622235841.png]]
+DFP 更新 (Davidon-Fletcher-Powell)：另一种更新公式，实际效果不如 BFGS。
+收敛性：通常实现超线性收敛。
+有限内存 BFGS (L-BFGS)：不需要存储完整的 <span class="arithmatex">\(H_k^{-1}\)</span> 矩阵，而是存储最近的几次迭代信息来近似，每次迭代的成本降至 <span class="arithmatex">\(O(nm)\)</span>。
+优点：计算量小于牛顿法 (<span class="arithmatex">\(O(n^2)\)</span> 或 <span class="arithmatex">\(O(nm)\)</span>)，收敛速度快于梯度下降法。缺点：需要存储 <span class="arithmatex">\(H_k\)</span> 或其逆的近似。
+![[Pasted image 20250623000030.png]]
+内点法（Interior Point Method, IPM）
+1.  <strong>线性规划标准型与对偶问题</strong>
+ <strong>原问题 (P)</strong>:
+ <span class="arithmatex">\(min \ c^T x\)</span>
+ <span class="arithmatex">\(s.t. \ Ax = b, x \ge 0\)</span>
+ <strong>对偶问题 (D)</strong>:
+ <span class="arithmatex">\(max \ b^T y\)</span>
+ <span class="arithmatex">\(s.t. \ A^T y + s = c, s \ge 0\)</span>
+ <strong>互补条件</strong>: 原始问题和对偶问题的最优解 <span class="arithmatex">\((x^*, y^*, s^*)\)</span> 满足 <span class="arithmatex">\(x_i \cdot s_i = 0, \forall i\)</span>。
+2.  <strong>对数障碍 (Log-Barrier) 方法</strong>
+ <strong>思想</strong>: 使用对数障碍项 <span class="arithmatex">\(- \mu\sum_{j=1}^n \ln x_j\)</span> 来“替代”原始问题中的不等式约束 <span class="arithmatex">\(x_j \ge 0\)</span>。这个障碍项会惩罚那些接近零的 <span class="arithmatex">\(x_j\)</span>，从而强制迭代过程始终保持在可行域的严格内部 (<span class="arithmatex">\(x_j &gt; 0\)</span>)。
+ <strong>障碍目标函数</strong>: 将原始线性规划问题转化为带对数障碍的原始问题：
+ <span class="arithmatex">\(min \ c^T x - \mu \sum_{j=1}^n \ln x_j\)</span>
+ <span class="arithmatex">\(s.t. \ Ax = b\)</span>
+ <strong>几何解释</strong>: 当 <span class="arithmatex">\(\mu \to \infty\)</span> 时，目标函数趋向于最大化 <span class="arithmatex">\(\prod x_j\)</span>，其最优解是可行域的解析中心；当 <span class="arithmatex">\(\mu \to 0\)</span> 时，对数障碍项的影响减弱，解趋向于原始问题的最优解。
+3.  <strong>最优性条件 (KKT 条件)</strong>
+对上述障碍问题的拉格朗日函数 <span class="arithmatex">\(L(x, y, \mu) = c^T x - y^T(Ax - b) - \mu \sum_{i=1}^n \ln x_i\)</span> 求解驻点条件。
+通过定义 <span class="arithmatex">\(s = \mu X^{-1}e\)</span> (其中 <span class="arithmatex">\(X = \text{diag}(x_1, \dots, x_n)\)</span>, <span class="arithmatex">\(e\)</span> 是全1向量)，可以得到障碍问题的 KKT 条件：
+<strong>原始可行性</strong>: <span class="arithmatex">\(Ax = b\)</span>
+<strong>对偶可行性</strong>: <span class="arithmatex">\(A^T y + s = c\)</span>
+<strong>扰动互补松弛性</strong>: <span class="arithmatex">\(XSe = \mu e\)</span> (等价于 <span class="arithmatex">\(x_i s_i = \mu, \forall i\)</span>)
+<strong>非负性</strong>: <span class="arithmatex">\(x, s &gt; 0\)</span>
+这些条件构成一个非线性方程组，是内点法算法的核心。
+<strong>原始-对偶中心路径 (Primal-Dual Central Path)</strong>
+中心路径是满足上述 KKT 条件的所有点 <span class="arithmatex">\((x(\mu), y(\mu), s(\mu))\)</span> 的集合，其中 <span class="arithmatex">\(\mu &gt; 0\)</span>。
+<strong>对偶间隙 (Duality Gap)</strong>: 对于中心路径上的点，对偶间隙 <span class="arithmatex">\(c^T x - b^T y = x^T s = n\mu\)</span>。这意味着随着 <span class="arithmatex">\(\mu \to 0\)</span>，对偶间隙也趋向于零，从而找到原始问题的最优解。
+<strong>中心性</strong>: 内点法通过生成一系列既严格可行又“接近”中心路径的迭代点来求解问题，这种“接近”的性质称为中心性。例如，一个 <span class="arithmatex">\(\beta\)</span>-近似解满足 <span class="arithmatex">\(\left\| \frac{1}{\mu}Xs - e \right\| \le \beta\)</span>。
+<strong>牛顿法 (Newton's Method)</strong>
+由于 KKT 条件是非线性方程组，内点法通常采用牛顿法来求解它。
+<strong>牛顿步</strong>: 通过对 KKT 条件进行线性化，得到一个线性方程组，求解该方程组即可得到牛顿步 <span class="arithmatex">\((\Delta x, \Delta y, \Delta s)\)</span>。
+牛顿法具有局部二次收敛性，即当迭代点足够接近最优解时，收敛速度非常快。
+内点法（特别是原始-对偶路径追踪算法）的基本框架是一个迭代过程，每次迭代都向着最优解靠近，同时保持解在可行域的内部。
+<strong>原始-对偶内点（障碍）算法</strong>
+<strong>步骤 0: 初始化</strong>
+选择初始数据 <span class="arithmatex">\((x_0, y_0, s_0, \mu_0)\)</span>，确保 <span class="arithmatex">\((x_0, y_0, s_0)\)</span> 是一个严格可行点 (<span class="arithmatex">\(Ax_0 = b, A^T y_0 + s_0 = c, x_0 &gt; 0, s_0 &gt; 0\)</span>) 并且是 <span class="arithmatex">\(P(\mu_0)\)</span> 的一个 <span class="arithmatex">\(\beta\)</span>-近似解（即靠近中心路径的初始点）。
+<strong>步骤 1: 设置当前值</strong>
+令当前迭代点 <span class="arithmatex">\((\bar{x}, \bar{y}, \bar{s}) = (x_k, y_k, s_k)\)</span>，当前障碍参数 <span class="arithmatex">\(\mu = \mu_k\)</span>。
+<strong>步骤 2: 缩小 <span class="arithmatex">\(\mu\)</span></strong>
+设置新的目标障碍参数 <span class="arithmatex">\(\mu' = \alpha \mu\)</span>，其中 <span class="arithmatex">\(\alpha \in (0, 1)\)</span> 是一个缩小因子（例如 <span class="arithmatex">\(\alpha = 1 - \frac{1}{\sqrt{n}}\)</span> 或其他更激进的值）。这旨在让迭代点向最终的最优解（<span class="arithmatex">\(\mu \to 0\)</span>）靠近。
+<strong>步骤 3: 计算牛顿方向</strong>
+在当前点 <span class="arithmatex">\((\bar{x}, \bar{y}, \bar{s})\)</span> 处，针对以 <span class="arithmatex">\(\mu'\)</span> 为目标障碍参数的 KKT 方程组，计算原始-对偶牛顿步 <span class="arithmatex">\((\Delta x, \Delta y, \Delta s)\)</span>。这涉及到求解以下线性方程组：
+<span class="arithmatex">\(A \Delta x = 0\)</span>
+<span class="arithmatex">\(A^T \Delta y + \Delta s = 0\)</span>
+<span class="arithmatex">\(\bar{S} \Delta x + \bar{X} \Delta s = \bar{X} \bar{S} e - \mu' e\)</span>
+（其中 <span class="arithmatex">\(\bar{X} = \text{diag}(\bar{x})\)</span>, <span class="arithmatex">\(\bar{S} = \text{diag}(\bar{s})\)</span>）
+<strong>步骤 4: 更新所有值</strong>
+更新迭代点：<span class="arithmatex">\((x', y', s') = (\bar{x}, \bar{y}, \bar{s}) + (\Delta x, \Delta y, \Delta s)\)</span>。
+<strong>步骤 5: 重置计数器并继续</strong>
+设置 <span class="arithmatex">\((x_{k+1}, y_{k+1}, s_{k+1}) = (x', y', s')\)</span>，<span class="arithmatex">\(\mu_{k+1} = \mu'\)</span>，<span class="arithmatex">\(k \leftarrow k + 1\)</span>。返回步骤 1，重复迭代，直到满足终止条件。
+<strong>终止条件</strong>
+对偶间隙 <span class="arithmatex">\(x^T s\)</span> 小于某个预设的容差 <span class="arithmatex">\(\epsilon\)</span> 时，算法停止。例如，当 <span class="arithmatex">\(x^T s \le \epsilon\)</span> 时。
+严格的终止条件还包括检查原始和对偶残差是否足够小：<span class="arithmatex">\(\|Ax - b\| \le \epsilon\)</span>, <span class="arithmatex">\(\|A^T y + s - c\| \le \epsilon\)</span>。
+当 <span class="arithmatex">\(\mu\)</span> 小于某个阈值 <span class="arithmatex">\(\bar{\mu}\)</span> 时，可以通过求解一个二次优化问题来识别原始和对偶最优解的结构（严格互补解），从而实现算法的有限终止。
+<strong>总体复杂度</strong>: 对于线性规划，内点法的总体复杂度大约为 <span class="arithmatex">\(O(n^{3.5})\)</span>。
+<strong>解的性质</strong>: 内点法倾向于找到具有最多非零元素的最优解（高秩解），这与单纯形法倾向于找到基本可行解（通常非零元素数量较少，低秩解）形成对比。
+整数规划（决策变量，约束，目标）
+建模逻辑关系
+“或者-或者”约束：例如，约束 <span class="arithmatex">\(f_1(x) \le 0\)</span> 或 <span class="arithmatex">\(f_2(x) \le 0\)</span> 必须成立。
+方法：引入一个0-1变量 <span class="arithmatex">\(y \in {0,1}\)</span>。将其转化为 <span class="arithmatex">\(f_1(x) \le My\)</span> 和 <span class="arithmatex">\(f_2(x) \le M(1-y)\)</span>。当 <span class="arithmatex">\(y=0\)</span> 时第一个约束生效，当 <span class="arithmatex">\(y=1\)</span> 时第二个约束生效。
+“N个中至少K个成立”约束：例如，给定 <span class="arithmatex">\(N\)</span> 个约束 <span class="arithmatex">\(f_i(x) \le 0, i=1,\dots,N\)</span>，要求其中至少有 <span class="arithmatex">\(K\)</span> 个成立。
+方法：对每个约束 <span class="arithmatex">\(f_i(x) \le 0\)</span> 引入一个0-1变量 <span class="arithmatex">\(y_i \in {0,1}\)</span> (<span class="arithmatex">\(y_i=1\)</span> 表示该约束成立，<span class="arithmatex">\(y_i=0\)</span> 表示不成立)。将其转化为 <span class="arithmatex">\(f_i(x) \le M(1-y_i)\)</span> (对于所有 <span class="arithmatex">\(i\)</span>) 和 <span class="arithmatex">\(\sum_{i=1}^N y_i = K\)</span>。
+“如果-那么”约束：例如，如果 <span class="arithmatex">\(f_1(x) \le 0\)</span> 成立，那么 <span class="arithmatex">\(f_2(x) \le 0\)</span> 也必须成立。
+方法：引入两个0-1变量 <span class="arithmatex">\(y_1, y_2 \in {0,1}\)</span>。将其转化为 <span class="arithmatex">\(f_1(x) \le M(1-y_1)\)</span>, <span class="arithmatex">\(f_2(x) \le M(1-y_2)\)</span>, 并且 <span class="arithmatex">\(y_2 \ge y_1\)</span>。
+函数取有限个值：当一个函数 <span class="arithmatex">\(f(x)\)</span> 只能取预定义的离散值集合 <span class="arithmatex">\({d_1, d_2, \dots, d_N}\)</span> 中的一个时。
+方法：引入一组0-1变量 <span class="arithmatex">\(y_i \in {0,1}\)</span>，其中 <span class="arithmatex">\(y_i=1\)</span> 表示 <span class="arithmatex">\(f(x)=d_i\)</span>。将其转化为 <span class="arithmatex">\(f(x) = \sum_{i=1}^N d_i y_i\)</span> 且 <span class="arithmatex">\(\sum_{i=1}^N y_i = 1\)</span>。
+固定成本问题：当生产量 <span class="arithmatex">\(x_t &gt; 0\)</span> 时会产生固定成本 <span class="arithmatex">\(f_t\)</span>，否则为0。
+方法：引入一个0-1变量 <span class="arithmatex">\(y_t \in {0,1}\)</span> (<span class="arithmatex">\(y_t=1\)</span> 若 <span class="arithmatex">\(x_t&gt;0\)</span>, <span class="arithmatex">\(y_t=0\)</span> 若 <span class="arithmatex">\(x_t=0\)</span>)。成本项表示为 <span class="arithmatex">\(p_t x_t + f_t y_t\)</span>，并添加约束 <span class="arithmatex">\(x_t \le My_t\)</span>。目标函数最小化时会自动使 <span class="arithmatex">\(y_t=0\)</span> 当 <span class="arithmatex">\(x_t=0\)</span>。
+线性化非线性项（乘积）
+两个0-1变量的乘积 (<span class="arithmatex">\(z = x \cdot y\)</span>, 其中 <span class="arithmatex">\(x,y \in {0,1}\)</span>)：
+方法：引入一个辅助的0-1变量 <span class="arithmatex">\(z \in {0,1}\)</span>，并添加线性约束：<span class="arithmatex">\(z \le x\)</span>, <span class="arithmatex">\(z \le y\)</span>, <span class="arithmatex">\(z \ge x+y-1\)</span>。
+一个0-1变量与一个连续变量的乘积 (<span class="arithmatex">\(z = x \cdot y\)</span>, 其中 <span class="arithmatex">\(x \in {0,1}, y \in [0, C]\)</span>)：
+方法：引入一个辅助的连续变量 <span class="arithmatex">\(z \in [0,C]\)</span>，并添加线性约束：<span class="arithmatex">\(z \le Cx\)</span>, <span class="arithmatex">\(z \le y\)</span>, <span class="arithmatex">\(z \ge y+C(x-1)\)</span>。
+处理分段线性函数
+方法：将函数定义域划分为若干区间，为每个区间引入一个0-1变量 <span class="arithmatex">\(w_i \in {0,1}\)</span>，表示 <span class="arithmatex">\(x\)</span> 所在的区间（通过 <span class="arithmatex">\(\sum w_i=1\)</span> 确保只有一个区间被选中）。通过引入新的连续变量 <span class="arithmatex">\(x_i = x w_i\)</span> 来线性化乘积项，从而重构分段线性函数的表达式。
+线性化最大值/最小值算符
+最大值 (<span class="arithmatex">\(z = \max_{i \in I} {x_i}\)</span>)：
+方法：添加约束 <span class="arithmatex">\(z \ge x_i\)</span> 对所有 <span class="arithmatex">\(i \in I\)</span> 成立。如果目标函数是最小化 <span class="arithmatex">\(z\)</span> (<span class="arithmatex">\(\min z\)</span>)，则这些约束通常已足够。
+最小值 (<span class="arithmatex">\(z = \min_{i \in I} {x_i}\)</span>)：
+方法：添加约束 <span class="arithmatex">\(z \le x_i\)</span> 对所有 <span class="arithmatex">\(i \in I\)</span> 成立。如果目标函数是最大化 <span class="arithmatex">\(z\)</span> (<span class="arithmatex">\(\max z\)</span>)，则这些约束通常已足够。
+![[Linear Programming 1]]
+![[Linear Programming 2]]
+![[Linear Programming 3]]
+![[Matrix Calculus]]
+![[LP对偶]]![[Pasted image 20250623003307.png]]
+![[Pasted image 20250623003332.png]]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

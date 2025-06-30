@@ -531,6 +531,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/LP%E5%AF%B9%E5%81%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LP对偶
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/Linear%20Programming%201/" class="md-nav__link">
         
   
@@ -606,6 +629,75 @@
   
   <span class="md-ellipsis">
     Matrix Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    优化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/%E5%86%85%E7%82%B9%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    内点法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E7%AE%97%E6%B3%95/notes/%E5%87%B8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    凸
     
   </span>
   
@@ -904,6 +996,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      有效性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#rcb" class="md-nav__link">
     <span class="md-ellipsis">
       RCB
@@ -1068,6 +1169,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      有效性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#rcb" class="md-nav__link">
     <span class="md-ellipsis">
       RCB
@@ -1124,12 +1234,18 @@ I(\theta) &amp; =-E\left[ \frac{{\partial^2\log f(X;\theta)}}{\partial \theta^2}
 <p>我们在估计参数<span class="arithmatex">\(\theta\)</span>的时候会想要我们的估计量<span class="arithmatex">\(Y=u(X_{1},X_{2},\dots,X_{n})\)</span>的方差尽可能小，而Rao-Cramer下界就告诉我们了最小可能是多少（不一定真正能达到）。同时，我们令<span class="arithmatex">\(E[Y]=k(\theta)\)</span></p>
 <p>有了Fisher信息量，我们定义Rao-Cramer下界</p>
 <div class="arithmatex">\[
-    Var(Y)\geq \frac{[k'(\theta)]}{nI(\theta)}
+    Var(Y)\geq \frac{[k'(\theta)]^2}{nI(\theta)}
 \]</div>
 <p>当<span class="arithmatex">\(k(\theta)=\theta\)</span>，即我们的估计量<span class="arithmatex">\(Y\)</span>是无偏的时候，我们的下界就是</p>
 <div class="arithmatex">\[
     Var(Y)\geq \frac{1}{nI(\theta)}
 \]</div>
+<h3 id="_1">有效性<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>一个无偏估计量的有效性通常会定义为</p>
+<div class="arithmatex">\[
+\frac{\text{最小可能方差（一般就是RCB）}}{\text{无偏估计量的方差}}
+\]</div>
+<p>因此效率越靠近1越好</p>
 <h3 id="rcb">RCB<a class="headerlink" href="#rcb" title="Permanent link">&para;</a></h3>
 <p>如果估计量<span class="arithmatex">\(Y\)</span>是无偏的，并且其方差达到了RC下界，则称它为RCB</p>
 
