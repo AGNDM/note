@@ -34,7 +34,7 @@ $$
 有了Fisher信息量，我们定义Rao-Cramer下界
 
 $$
-	Var(Y)\geq \frac{[k'(\theta)]}{nI(\theta)}
+	Var(Y)\geq \frac{[k'(\theta)]^2}{nI(\theta)}
 $$
 
 当$k(\theta)=\theta$，即我们的估计量$Y$是无偏的时候，我们的下界就是
@@ -42,6 +42,15 @@ $$
 $$
 	Var(Y)\geq \frac{1}{nI(\theta)}
 $$
+
+### 有效性
+一个无偏估计量的有效性通常会定义为
+
+$$
+\frac{\text{最小可能方差（一般就是RCB）}}{\text{无偏估计量的方差}}
+$$
+
+因此效率越靠近1越好
 
 ### RCB
 如果估计量$Y$是无偏的，并且其方差达到了RC下界，则称它为RCB

@@ -1,6 +1,6 @@
 ## 参数的函数
 寻找$g(\theta)$的MVUE
-1. 直接找SS的某个个函数值，然后把他的期望纠偏到$g(\theta)$
+1. 先求解CSS，然后直接找CSS的某个函数值，然后把他的期望纠偏到$g(\theta)$，这是由Lehmann-Scheffé 定理保证的
 2. 先找到$g(\theta)$的一个无偏估计量，然后用Rao-Blackwell找到MVUE
 
 对于第一种想法，我们最朴素的构造就是用$g(\theta)$的MLE，也就是把$\hat{\theta}$代进去。更复杂地，我们可以用一些巧妙的构造比如$E[X_{1}+X_{2}]=g(\theta)$
